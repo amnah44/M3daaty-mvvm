@@ -30,7 +30,7 @@ abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId:
         savedInstanceState: Bundle?
     ): View? {
         _binding = bindingInflater(inflater, fragmentLayoutId, container, false)
-        _binding.setVariable(BR.viewModel, viewModel)
+//        _binding.setVariable(BR.viewModel, viewModel)
         _binding.lifecycleOwner = this
         return binding.root
     }
