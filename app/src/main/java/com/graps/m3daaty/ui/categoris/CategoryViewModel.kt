@@ -1,7 +1,8 @@
 package com.graps.m3daaty.ui.categoris
 
-import androidx.lifecycle.ViewModel
+import com.graps.m3daaty.ui.base.BaseViewModel
 
-class CategoryViewModel : ViewModel() {
+class CategoryViewModel : BaseViewModel() {
+
 
 }
