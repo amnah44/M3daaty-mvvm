@@ -49,7 +49,7 @@
             android:layout_marginBottom="@dimen/margin_small"
             android:elevation="@dimen/elevation_small"
             android:fontFamily="@font/montserrat_alternates_extra_bold"
-            android:paddingEnd="16dp"
+            android:paddingEnd="@dimen/padding_medium"
             android:text="uisine"
             android:textColor="@color/green_color"
             android:textSize="16sp"
