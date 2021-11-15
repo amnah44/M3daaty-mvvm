@@ -16,6 +16,8 @@
     <dimen name="padding_small">10dp</dimen>
     <dimen name="search_animation_width">300dp</dimen>
     <dimen name="search_animation_height">300dp</dimen>
+    <dimen name="category_item_width">150dp</dimen>
+    <dimen name="category_item_height">150dp</dimen>
 
 
 </resources>
