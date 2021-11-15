@@ -19,6 +19,7 @@
     <dimen name="category_item_width">150dp</dimen>
     <dimen name="category_item_height">150dp</dimen>
     <dimen name="category_item_radius">24dp</dimen>
+    <dimen name="image_category_height">90dp</dimen>
 
 
 </resources>

@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="@dimen/image_category_height"
                 android:src="@drawable/ic_bowl"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
