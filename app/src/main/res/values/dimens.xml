@@ -22,6 +22,7 @@
     <dimen name="image_category_height">90dp</dimen>
     <dimen name="item_search_width">150dp</dimen>
     <dimen name="item_search_height">200dp</dimen>
+    <dimen name="item_search_radius">8dp</dimen>
 
 
 </resources>
