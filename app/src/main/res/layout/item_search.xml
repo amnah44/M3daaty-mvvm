@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.graps.m3daaty.model.domain.recipeSearchResponse.Result" />
+            type="com.graps.m3daaty.model.domain.recipeSearch.Result" />
     </data>
 
     <androidx.cardview.widget.CardView

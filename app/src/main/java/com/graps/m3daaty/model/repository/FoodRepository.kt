@@ -1,10 +1,7 @@
 package com.graps.m3daaty.model.repository
 
-import android.util.Log
-import com.graps.m3daaty.model.domain.recipeSearchResponse.RecipeSearch
 import com.graps.m3daaty.model.network.SpoonacularApi
 import com.graps.m3daaty.util.State
-import io.reactivex.rxjava3.annotations.NonNull
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
 

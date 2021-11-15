@@ -3,7 +3,7 @@ package com.graps.m3daaty.model.network
 import com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation
 import com.graps.m3daaty.model.domain.randomRecipesResponse.RandomRecipes
 import com.graps.m3daaty.model.domain.recipeNutrition.RecipeNutrition
-import com.graps.m3daaty.model.domain.recipeSearchResponse.RecipeSearch
+import com.graps.m3daaty.model.domain.recipeSearch.RecipeSearch
 import com.graps.m3daaty.model.domain.tasteResponse.RecipeTaste
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response

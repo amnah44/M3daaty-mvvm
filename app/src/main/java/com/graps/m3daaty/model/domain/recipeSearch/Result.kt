@@ -1,4 +1,4 @@
-package com.graps.m3daaty.model.domain.recipeSearchResponse
+package com.graps.m3daaty.model.domain.recipeSearch
 
 
 import com.google.gson.annotations.SerializedName
