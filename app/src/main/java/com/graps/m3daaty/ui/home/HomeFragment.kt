@@ -10,7 +10,7 @@ import com.graps.m3daaty.ui.base.BaseFragment
 class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
     override val LOG_TAG: String
         get() = TODO("Not yet implemented")
-    override val viewModel: ViewModel
+    override val viewModel: HomeViewModel
         get() = TODO("Not yet implemented")
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> HomeFragmentBinding
         get() = TODO("Not yet implemented")
