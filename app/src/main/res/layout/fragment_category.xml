@@ -46,7 +46,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/margin_small"
             android:elevation="2dp"
             android:fontFamily="@font/montserrat_alternates_extra_bold"
             android:paddingEnd="16dp"
