@@ -34,5 +34,5 @@
         android:id="@+id/foodActivity"
         android:name="com.graps.m3daaty.ui.M3daatyActivity"
         android:label="FoodActivity"
-        tools:layout="@layout/activity_food"/>
+        tools:layout="@layout/activity_m3daaty"/>
 </navigation>
