@@ -1,6 +1,6 @@
 package com.graps.m3daaty.model.network
 
-import com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation
+import com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation
 import com.graps.m3daaty.model.domain.randomRecipesResponse.RandomRecipes
 import com.graps.m3daaty.model.domain.recipeNutritionReponse.RecipeNutrition
 import com.graps.m3daaty.model.domain.recipeSearchResponse.RecipeSearch
