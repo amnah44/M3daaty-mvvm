@@ -15,4 +15,9 @@
         android:name="com.graps.m3daaty.ui.categoris.CategoryFragment"
         android:label="CategoryFragment"
         tools:layout="@layout/fragment_category"/>
+    <fragment
+        android:id="@+id/foodDetailsFragment"
+        android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
+        android:label="FoodDetailsFragment"
+        tools:layout="@layout/fragment_food_details"/>
 </navigation>
