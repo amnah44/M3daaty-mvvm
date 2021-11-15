@@ -1,0 +1,31 @@
+package com.graps.m3daaty.util
+
+enum class Category {
+    african,
+    american,
+    british,
+    cajun,
+    caribbean,
+    chinese,
+    easterneuropean,
+    european,
+    french,
+    german,
+    greek,
+    indian,
+    irish,
+    italian,
+    japanese,
+    jewish,
+    korean,
+    latinamerican,
+    mediterranean,
+    mexican,
+    middleeastern,
+    nordic,
+    southern,
+    spanish,
+    thai,
+    vietnamese,
+
+}
