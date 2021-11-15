@@ -10,7 +10,7 @@ import com.graps.m3daaty.ui.base.BaseFragment
 class FoodDetailsFragment : BaseFragment<FragmentFoodDetailsBinding>(R.layout.fragment_food_details){
     override val LOG_TAG: String
         get() = TODO("Not yet implemented")
-    override val viewModel: ViewModel
+    override val viewModel: FoodDetailsViewModel
         get() = TODO("Not yet implemented")
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentFoodDetailsBinding
         get() = TODO("Not yet implemented")
