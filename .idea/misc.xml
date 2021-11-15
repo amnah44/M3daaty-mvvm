@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/cuisine_background.xml" value="0.264" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.14635416666666667" />
         <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/ic_bowl.xml" value="0.2703125" />
         <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/food_main.xml" value="0.25416666666666665" />
         <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_category.xml" value="0.264" />
@@ -16,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
