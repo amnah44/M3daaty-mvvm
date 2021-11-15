@@ -1,9 +1,9 @@
-package com.graps.m3daaty.model.domain.randomRecipesResponse
+package com.graps.m3daaty.model.domain.randomRecipes
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Equipment(
+data class Ingredient(
     @SerializedName("id")
     val id: Int? = null,
     @SerializedName("image")
@@ -11,7 +11,5 @@ data class Equipment(
     @SerializedName("localizedName")
     val localizedName: String? = null,
     @SerializedName("name")
-    val name: String? = null,
-    @SerializedName("temperature")
-    val temperature: Temperature? = null
+    val name: String? = null
 )

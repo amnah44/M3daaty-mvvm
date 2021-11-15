@@ -1,9 +1,9 @@
-package com.graps.m3daaty.model.domain.randomRecipesResponse
+package com.graps.m3daaty.model.domain.randomRecipes
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Us(
+data class Metric(
     @SerializedName("amount")
     val amount: Double? = null,
     @SerializedName("unitLong")
