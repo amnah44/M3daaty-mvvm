@@ -13,6 +13,7 @@
         android:layout_width="150dp"
         android:layout_height="200dp"
         app:cardCornerRadius="8dp"
+        android:elevation="@dimen/cardview_default_elevation"
         android:background="@color/gray_200"
         android:layout_margin="16dp"
         android:padding="10dp">
@@ -24,8 +25,10 @@
             <ImageView
                 android:id="@+id/image_food"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_margin="16dp"
+                imageUrl="@{item.image}"
+                tools:background="@drawable/ic_image_place_holder"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
