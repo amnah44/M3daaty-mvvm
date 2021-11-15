@@ -4,4 +4,8 @@
         android:title=""
         android:icon="@drawable/home_action"
         />
+    <item android:id="@+id/searchFragment"
+        android:title=""
+        android:icon="@drawable/search_actoin"
+        />
 </menu>
