@@ -60,7 +60,6 @@
             android:layout_width="@dimen/search_animation_width"
             android:layout_height="@dimen/search_animation_height"
             android:layout_margin="@dimen/margin_medium"
-            android:onTextChanged="@{viewModel.flag}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
