@@ -6,4 +6,5 @@
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="margin_little">4dp</dimen>
     <dimen name="category_view_height">60dp</dimen>
+    <dimen name="category_top_image_width">24dp</dimen>
 </resources>
