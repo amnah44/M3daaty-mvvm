@@ -47,10 +47,3 @@ fun <T> showOnSuccess(view: View, state: State<T>?) {
     else
         view.visibility = View.GONE
 }
-//@BindingAdapter
-//fun onTextChanged(view: View, flag: Boolean){
-//    if(flag)
-//        view.visibility = View.VISIBLE
-//    else
-//        view.visibility = View.GONE
-//}
