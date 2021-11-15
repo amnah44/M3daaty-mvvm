@@ -4,4 +4,5 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="elevation_small">2dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
+    <dimen name="margin_little">4dp</dimen>
 </resources>
