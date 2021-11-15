@@ -13,9 +13,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         get() = TODO("Not yet implemented")
     override val viewModel by activityViewModels<HomeViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentHomeBinding =
-        DataBindingUtil :: inflate
+        DataBindingUtil::inflate
 
     override fun setupView() {
-        
+
     }
 }
