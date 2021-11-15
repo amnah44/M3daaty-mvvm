@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/cuisine_background.xml" value="0.264" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.14635416666666667" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/ic_bowl.xml" value="0.2703125" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/drawable/ic_pacman.xml" value="0.2703125" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/food_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_category.xml" value="0.264" />
-        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/item_cuisine.xml" value="0.4" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/drawable/ic_search.xml" value="0.37592592592592594" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/drawable/search_rounded_view.xml" value="0.37592592592592594" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/food_main.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/fragment_category.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/fragment_food_details.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/home_fragment.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/item_cuisine.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/item_search.xml" value="0.25" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/meal_result_fragment.xml" value="0.27898550724637683" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/My m3dah/M3daaty-mvvm/app/src/main/res/layout/search_fragment.xml" value="0.22" />
       </map>
     </option>
   </component>
@@ -18,12 +21,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.264" />
-      </ProjectState>
-    </option>
   </component>
 </project>
