@@ -20,4 +20,9 @@
         android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
         android:label="FoodDetailsFragment"
         tools:layout="@layout/fragment_food_details"/>
+    <fragment
+        android:id="@+id/mealResultFragment"
+        android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
+        android:label="MealResultFragment"
+        tools:layout="@layout/meal_result_fragment"/>
 </navigation>
