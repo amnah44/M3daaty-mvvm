@@ -13,7 +13,7 @@
     <dimen name="text_medium">12sp</dimen>
     <dimen name="text_small">10sp</dimen>
     <dimen name="text_xx_large">20</dimen>
-
+    <dimen name="padding_small">10dp</dimen>
 
 
 </resources>
