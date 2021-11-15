@@ -5,4 +5,5 @@
     <dimen name="elevation_small">2dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="margin_little">4dp</dimen>
+    <dimen name="category_view_height">60dp</dimen>
 </resources>
