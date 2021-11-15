@@ -5,7 +5,7 @@ import com.graps.m3daaty.util.State
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
 
-object FoodRepository {
+object Repository {
 
     fun getRandomRecipes(filterTag: String?, recipesCount: Int?) = wrapResponse(
         Api.spoonApi
