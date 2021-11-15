@@ -11,6 +11,6 @@ class FoodActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = DataBindingUtil.setContentView(this, R.layout.food_main)
+        _binding = DataBindingUtil.setContentView(this, R.layout.activity_food)
     }
 }
