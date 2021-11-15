@@ -30,4 +30,9 @@
         android:name="com.graps.m3daaty.ui.search.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/search_fragment"/>
+    <activity
+        android:id="@+id/foodActivity"
+        android:name="com.graps.m3daaty.ui.FoodActivity"
+        android:label="FoodActivity"
+        tools:layout="@layout/food_main"/>
 </navigation>
