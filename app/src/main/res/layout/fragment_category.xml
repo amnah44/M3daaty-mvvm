@@ -52,7 +52,7 @@
             android:paddingEnd="@dimen/padding_medium"
             android:text="uisine"
             android:textColor="@color/green_color"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_large"
             app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
