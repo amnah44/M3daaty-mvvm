@@ -10,8 +10,8 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/item_search_width"
+        android:layout_height="@dimen/item_search_height"
         app:cardCornerRadius="8dp"
         android:background="@color/gray_200"
         android:layout_margin="16dp"

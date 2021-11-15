@@ -20,6 +20,8 @@
     <dimen name="category_item_height">150dp</dimen>
     <dimen name="category_item_radius">24dp</dimen>
     <dimen name="image_category_height">90dp</dimen>
+    <dimen name="item_search_width">150dp</dimen>
+    <dimen name="item_search_height">200dp</dimen>
 
 
 </resources>
