@@ -18,6 +18,14 @@ fun <T> showOnError(view: View, state: State<T>?) {
     else
         view.visibility = View.GONE
 }
+
+@BindingAdapter(value = ["app:showOnSuccess"])
+fun <T> showOnSuccess(view: View, state: State<T>?) {
+    if (state is State.Success)
+        view.visibility = View.VISIBLE
+    else
+        view.visibility = View.GONE
+}
 //@BindingAdapter
 //fun onTextChanged(view: View, flag: Boolean){
 //    if(flag)
