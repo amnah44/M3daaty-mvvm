@@ -3,6 +3,7 @@ package com.graps.m3daaty.model.network
 import com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation
 import com.graps.m3daaty.model.domain.randomRecipesResponse.RandomRecipes
 import com.graps.m3daaty.model.domain.recipeSearchResponse.RecipeSearch
+import com.graps.m3daaty.model.domain.tasteResponse.RecipeTaste
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -27,6 +28,11 @@ interface SpoonApiRequestMethods {
     fun getRecipeInfo(
         @Path("id") recipeId:Int
     ) : Single<RecipeInformation>
+
+    @GET("{id}/tasteWidget.json")
+    fun getRecipeTaste(
+        @Path("id") recipeId:Int
+    ) : Single<RecipeTaste>
 
 
 
