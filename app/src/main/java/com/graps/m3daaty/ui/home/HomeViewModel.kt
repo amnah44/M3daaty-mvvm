@@ -1,7 +1,8 @@
 package com.graps.m3daaty.ui.home
 
-import androidx.lifecycle.ViewModel
+import com.graps.m3daaty.ui.base.BaseViewModel
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel: BaseViewModel() {
+
 
 }

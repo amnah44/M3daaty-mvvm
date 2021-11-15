@@ -1,7 +1,7 @@
 package com.graps.m3daaty.ui.search
 
-import androidx.lifecycle.ViewModel
+import com.graps.m3daaty.ui.base.BaseViewModel
 
-class SearchViewModel : ViewModel(){
+class SearchViewModel : BaseViewModel(){
 
 }

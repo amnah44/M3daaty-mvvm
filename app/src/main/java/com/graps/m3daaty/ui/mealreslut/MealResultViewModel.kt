@@ -1,6 +1,6 @@
 package com.graps.m3daaty.ui.mealreslut
 
-import androidx.lifecycle.ViewModel
+import com.graps.m3daaty.ui.base.BaseViewModel
 
-class MealResultViewModel : ViewModel() {
+class MealResultViewModel : BaseViewModel() {
 }

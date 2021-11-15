@@ -2,7 +2,7 @@ package com.graps.m3daaty.ui.base
 
 import androidx.recyclerview.widget.DiffUtil
 
-class FoodDiffUtils <T>(val foodOldList: List<T>, val foodNewList: List<T>) :
+class FoodDiffUtils <T>(private val foodOldList: List<T>, private val foodNewList: List<T>) :
     DiffUtil.Callback() {
     override fun getOldListSize() = foodOldList.size
 
