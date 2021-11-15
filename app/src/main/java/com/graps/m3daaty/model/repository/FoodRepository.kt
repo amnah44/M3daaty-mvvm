@@ -1,6 +1,6 @@
 package com.graps.m3daaty.model.repository
 
-import com.graps.m3daaty.model.network.SpoonacularApi
+import com.graps.m3daaty.model.network.Api
 import com.graps.m3daaty.util.State
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
@@ -8,7 +8,7 @@ import retrofit2.Response
 object FoodRepository {
 
     fun getRandomRecipes(filterTag: String?, recipesCount: Int?) = wrapResponse(
-        SpoonacularApi.spoonApi
+        Api.spoonApi
             .getRandomRecipes(
                 filterTag,
                 recipesCount,
@@ -17,7 +17,7 @@ object FoodRepository {
 
     fun getRecipeSearchResult(recipeName: String, cuisine: String?, recipesCount: Int?) =
         wrapResponse(
-            SpoonacularApi.spoonApi
+            Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
                     cuisine,
@@ -28,7 +28,7 @@ object FoodRepository {
 
     fun getRecipeInfo(recipeId: Int) {
         wrapResponse(
-            SpoonacularApi.spoonApi
+            Api.spoonApi
                 .getRecipeInfo(
                     recipeId,
                 )
@@ -36,14 +36,14 @@ object FoodRepository {
     }
 
     fun getRecipeTaste(recipeId: Int) = wrapResponse(
-        SpoonacularApi.spoonApi
+        Api.spoonApi
             .getRecipeTaste(
                 recipeId,
             )
     )
 
     fun getRecipeNutrition(recipeId: Int) = wrapResponse(
-        SpoonacularApi.spoonApi
+        Api.spoonApi
             .getRecipeNutrition(
                 recipeId
             )
