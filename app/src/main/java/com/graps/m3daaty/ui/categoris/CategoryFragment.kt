@@ -10,7 +10,7 @@ import com.graps.m3daaty.ui.base.BaseFragment
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
     override val LOG_TAG: String
         get() = TODO("Not yet implemented")
-    override val viewModel: ViewModel
+    override val viewModel: CategoryViewModel
         get() = TODO("Not yet implemented")
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCategoryBinding
         get() = TODO("Not yet implemented")

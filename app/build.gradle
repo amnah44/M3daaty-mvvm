@@ -55,7 +55,6 @@ dependencies {
 
     //liveData implementation
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
     //navigation component implementation
     def nav_version = "2.3.5"
