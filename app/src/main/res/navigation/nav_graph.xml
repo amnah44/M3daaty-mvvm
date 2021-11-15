@@ -25,4 +25,9 @@
         android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
         android:label="MealResultFragment"
         tools:layout="@layout/meal_result_fragment"/>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.graps.m3daaty.ui.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment"/>
 </navigation>
