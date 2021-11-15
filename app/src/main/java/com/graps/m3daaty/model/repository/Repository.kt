@@ -8,7 +8,7 @@ import io.reactivex.rxjava3.annotations.NonNull
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
 
-object FoodRepository {
+object Repository {
 
     fun getRandomRecipes(filterTag: String?, recipesCount: Int?) = wrapResponse(
         SpoonacularApi.spoonApi
