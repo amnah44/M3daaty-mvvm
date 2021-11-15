@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.M3daaty">
         <activity
-            android:name=".ui.FoodActivity"
+            android:name=".ui.M3daatyActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.graps.m3daaty.R
 import com.graps.m3daaty.databinding.ActivityFoodBinding
 
-class FoodActivity : AppCompatActivity() {
+class M3daatyActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityFoodBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
