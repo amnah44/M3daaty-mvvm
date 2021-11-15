@@ -8,4 +8,8 @@
         android:title=""
         android:icon="@drawable/search_actoin"
         />
+    <item android:id="@+id/categoryFragment"
+        android:title=""
+        android:icon="@drawable/category_action"
+        />
 </menu>
