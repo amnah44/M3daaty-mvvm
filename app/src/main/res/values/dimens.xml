@@ -27,6 +27,8 @@
     <dimen name="card_details_bar_width">2dp</dimen>
     <dimen name="card_details_bar_height">32dp</dimen>
     <dimen name="card_details_bar_radius">16dp</dimen>
+    <dimen name="margin_x_large">45dp</dimen>
+    <dimen name="card_radius_medium">16dp</dimen>
 
 
 </resources>
