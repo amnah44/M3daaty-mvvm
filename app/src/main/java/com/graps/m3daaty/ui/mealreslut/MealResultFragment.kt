@@ -6,7 +6,7 @@ import com.graps.m3daaty.R
 import com.graps.m3daaty.databinding.MealResultFragmentBinding
 import com.graps.m3daaty.ui.base.BaseFragment
 
-class MealResultFragment : BaseFragment<MealResultFragmentBinding>(R.layout.meal_result_fragment) {
+class MealResultFragment : BaseFragment<MealResultFragmentBinding>(R.layout.fragment_meal_result) {
     override val LOG_TAG: String
         get() = TODO("Not yet implemented")
     override val viewModel: MealResultViewModel
