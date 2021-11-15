@@ -28,7 +28,6 @@
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:itemIconTint="@color/dark_400_color"
             app:labelVisibilityMode="unlabeled"
             android:background="@color/gray_200"
             app:itemBackground="@color/gray_200"
