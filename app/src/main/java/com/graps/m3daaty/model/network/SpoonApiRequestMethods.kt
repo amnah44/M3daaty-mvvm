@@ -6,6 +6,7 @@ import com.graps.m3daaty.model.domain.recipeNutritionReponse.RecipeNutrition
 import com.graps.m3daaty.model.domain.recipeSearchResponse.RecipeSearch
 import com.graps.m3daaty.model.domain.tasteResponse.RecipeTaste
 import io.reactivex.rxjava3.core.Single
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -16,28 +17,28 @@ interface SpoonApiRequestMethods {
     fun getRandomRecipes(
         @Query("tags") filterTag: String?,
         @Query("number") recipesCount: Int?
-    ) : Single<RandomRecipes>
+    ) : Single<Response<RandomRecipes>>
 
     @GET("complexSearch")
     fun getRecipeSearchResult(
         @Query("query") recipeName:String?,
         @Query("cuisine") cuisine:String?,
         @Query("number") recipesCount: Int?
-    ) : Single<RecipeSearch>
+    ) : Single<Response<RecipeSearch>>
 
     @GET("{id}/information")
     fun getRecipeInfo(
         @Path("id") recipeId:Int
-    ) : Single<RecipeInformation>
+    ) : Single<Response<RecipeInformation>>
 
     @GET("{id}/tasteWidget.json")
     fun getRecipeTaste(
         @Path("id") recipeId:Int
-    ) : Single<RecipeTaste>
+    ) : Single<Response<RecipeTaste>>
 
     @GET("{id}/nutritionWidget.json")
     fun getRecipeNutrition(
         @Path("id") recipeId:Int
-    ) : Single<RecipeNutrition>
+    ) : Single<Response<RecipeNutrition>>
 
 }
