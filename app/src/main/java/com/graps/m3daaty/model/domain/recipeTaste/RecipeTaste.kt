@@ -1,4 +1,4 @@
-package com.graps.m3daaty.model.domain.tasteResponse
+package com.graps.m3daaty.model.domain.recipeTaste
 
 
 import com.google.gson.annotations.SerializedName
