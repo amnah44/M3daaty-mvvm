@@ -210,6 +210,19 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_time"
+                    android:text="@string/ingredients"
+                    android:layout_marginStart="@dimen/margin_x_large"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/dark_400_color"/>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
