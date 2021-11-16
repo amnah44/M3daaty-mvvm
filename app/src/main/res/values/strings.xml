@@ -2,4 +2,6 @@
     <string name="app_name">M3daaty</string>
     <string name="search_for_your_recipe">Search for your recipe</string>
     <string name="search">Search...</string>
+    <string name="what_would_you_like_to_cook">what would you like to cook</string>
+
 </resources>
