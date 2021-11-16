@@ -27,10 +27,10 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/recipe_1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="H,100,81"
+                app:layout_constraintDimensionRatio="H,100:81"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.3" />
+                app:layout_constraintWidth_percent="0.35" />
 
             <TextView
                 android:id="@+id/meal_name"
