@@ -1,6 +1,8 @@
 package com.graps.m3daaty.model.domain.getRecipeInformationResponse
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class RecipeInformation(
@@ -76,4 +78,12 @@ data class RecipeInformation(
     val weightWatcherSmartPoints: Int? = null,
     @SerializedName("winePairing")
     val winePairing: WinePairing? = null
-)
+):Parcelable {
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(p0: Parcel?, p1: Int) {
+        TODO("Not yet implemented")
+    }
+}
