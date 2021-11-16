@@ -9,8 +9,7 @@ import com.graps.m3daaty.databinding.FragmentSearchBinding
 import com.graps.m3daaty.ui.base.BaseFragment
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
-    override val LOG_TAG: String
-        get() = TODO("Not yet implemented")
+    override val LOG_TAG: String get() = "SEARCH_FRAGMENT"
     override val viewModel by activityViewModels<SearchViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSearchBinding =
         DataBindingUtil::inflate
