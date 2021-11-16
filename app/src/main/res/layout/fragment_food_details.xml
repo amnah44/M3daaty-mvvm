@@ -194,7 +194,7 @@
                             android:layout_marginBottom="@dimen/margin_medium"
                             android:fontFamily="@font/roboto_bold"
                             android:textAlignment="center"
-                            android:text="@{itemRecipe.}"
+                            android:text="@{itemRecipe.sourceName}"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -238,13 +238,14 @@
                     android:id="@+id/recycler_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:items="@{itemRecipe.extendedIngredients}"
                     android:layout_marginTop="@dimen/margin_small"
                     app:layout_constraintStart_toStartOf="@id/text_ingredients"
                     app:layout_constraintTop_toBottomOf="@id/text_ingredients"
                     tools:listitem="@layout/item_ingredients"/>
 
                 <TextView
-                    android:id="@+id/text_dircetion"
+                    android:id="@+id/text_direction_word"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_little"
@@ -255,13 +256,14 @@
                     app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
                     app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_direction"
+                <TextView
+                    android:id="@+id/text_direction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@{itemRecipe.instructions}"
                     android:layout_marginTop="@dimen/margin_small"
-                    app:layout_constraintStart_toStartOf="@id/text_dircetion"
-                    app:layout_constraintTop_toBottomOf="@id/text_dircetion"
+                    app:layout_constraintStart_toStartOf="@id/text_direction_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_direction_word"
                     tools:listitem="@layout/item_ingredients"/>
 
 

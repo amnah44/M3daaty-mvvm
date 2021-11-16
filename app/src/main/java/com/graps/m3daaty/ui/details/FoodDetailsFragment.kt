@@ -18,7 +18,8 @@ class FoodDetailsFragment : BaseFragment<FragmentFoodDetailsBinding>(R.layout.fr
     private val  arg:FoodDetailsFragmentArgs by navArgs()
     override fun setupView() {
         val recipe=arg.recipeData
-
+        binding.viewModel=viewModel
+        binding.recyclerIngredients.adapter=IngredientsAdapter(mutableListOf(), viewModel)
     }
 
 }
