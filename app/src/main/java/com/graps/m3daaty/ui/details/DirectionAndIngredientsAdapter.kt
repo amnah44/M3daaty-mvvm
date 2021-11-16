@@ -10,3 +10,8 @@ class IngredientsAdapter(
     override val layoutId: Int = R.layout.item_ingredients
 }
 
+class DirectionAdapter(
+    items: List<String>, listener: BaseInteractionListener
+): BaseAdapter<String>(items, listener) {
+    override val layoutId: Int = R.layout.item_ingredients
+}
