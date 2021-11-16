@@ -169,42 +169,42 @@
                             android:id="@+id/icon_calories"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_little"
                             android:src="@drawable/ic_baseline_local_fire_department_24"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:layout_marginBottom="@dimen/margin_little"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/text_calories_number"
                             android:layout_width="29dp"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
-                            android:textSize="@dimen/text_small"
-                            android:textColor="@color/blue"
-                            android:textAlignment="center"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             android:layout_marginBottom="@dimen/margin_medium"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@id/icon_calories"
                             app:layout_constraintStart_toStartOf="@id/icon_calories"
                             app:layout_constraintTop_toBottomOf="@id/icon_calories"
-                            tools:text="300"/>
+                            tools:text="300" />
 
                         <TextView
                             android:id="@+id/text_calories_metric"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_small"
-                            android:textAlignment="center"
-                            android:fontFamily="@font/roboto_bold"
-                            android:textColor="@color/blue"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             android:layout_marginBottom="@dimen/margin_little"
-                            app:layout_constraintStart_toStartOf="@id/text_calories_number"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Cal/serving"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@id/text_calories_number"
-                            app:layout_constraintTop_toBottomOf="@id/text_calories_number"
-                            android:text="Cal/serving"/>
+                            app:layout_constraintStart_toStartOf="@id/text_calories_number"
+                            app:layout_constraintTop_toBottomOf="@id/text_calories_number" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -214,27 +214,33 @@
                     android:id="@+id/text_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_time"
-                    android:text="@string/ingredients"
                     android:layout_margin="@dimen/margin_large"
                     android:fontFamily="@font/robotor_egular"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
-                    android:textColor="@color/dark_400_color"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_time" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
                     app:layout_constraintStart_toStartOf="@id/text_ingredients"
-                    app:layout_constraintTop_toBottomOf="@id/text_ingredients"
-                    android:layout_marginTop="@dimen/margin_small"/>
+                    app:layout_constraintTop_toBottomOf="@id/text_ingredients" />
 
-
-
-
-
-
+                <TextView
+                    android:id="@+id/text_dircetion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_little"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/directions"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
