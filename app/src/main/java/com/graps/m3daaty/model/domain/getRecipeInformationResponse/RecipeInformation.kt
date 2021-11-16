@@ -1,10 +1,12 @@
 package com.graps.m3daaty.model.domain.getRecipeInformationResponse
 
 
+import android.annotation.SuppressLint
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
+@SuppressLint("ParcelCreator")
 data class RecipeInformation(
     @SerializedName("aggregateLikes")
     val aggregateLikes: Int? = null,
