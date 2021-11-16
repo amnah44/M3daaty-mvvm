@@ -12,7 +12,7 @@
     <dimen name="text_large">14sp</dimen>
     <dimen name="text_medium">12sp</dimen>
     <dimen name="text_small">10sp</dimen>
-    <dimen name="text_xx_large">20</dimen>
+    <dimen name="text_xx_large">20sp</dimen>
     <dimen name="padding_small">10dp</dimen>
     <dimen name="search_animation_width">300dp</dimen>
     <dimen name="search_animation_height">300dp</dimen>
