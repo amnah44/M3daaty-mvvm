@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/gray_200"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +28,7 @@
             android:layout_marginStart="@dimen/margin_small"
             android:fontFamily="@font/robotor_egular"
             android:textColor="@color/dark_400_color"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
