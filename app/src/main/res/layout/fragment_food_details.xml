@@ -41,7 +41,7 @@
             app:cardCornerRadius="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_test">
+            app:layout_constraintTop_toBottomOf="@id/image_food">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -228,7 +228,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_small"
                     app:layout_constraintStart_toStartOf="@id/text_ingredients"
-                    app:layout_constraintTop_toBottomOf="@id/text_ingredients" />
+                    app:layout_constraintTop_toBottomOf="@id/text_ingredients"
+                    tools:listitem="@layout/item_ingredients"/>
 
                 <TextView
                     android:id="@+id/text_dircetion"
@@ -241,6 +242,15 @@
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
                     app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintStart_toStartOf="@id/text_dircetion"
+                    app:layout_constraintTop_toBottomOf="@id/text_dircetion"
+                    tools:listitem="@layout/item_ingredients"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
