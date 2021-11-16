@@ -4,6 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="itemRecipe"
+            type="com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.details.IngredientsAndDirectionInteractionListener" />
+        <variable
+            name="viewModel"
+            type="com.graps.m3daaty.ui.details.FoodDetailsViewModel" />
 
     </data>
 
