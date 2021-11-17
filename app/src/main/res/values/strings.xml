@@ -4,4 +4,7 @@
     <string name="search">Search...</string>
     <string name="ingredients">Ingredients:</string>
     <string name="directions">Directions:</string>
+    <string name="what_would_you_like_to_cook">what would you like to cook</string>
+    <string name="today_recipe_s">Today recipe’s</string>
+
 </resources>

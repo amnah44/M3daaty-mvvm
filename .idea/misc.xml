@@ -3,8 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/M3daaty-new/app/src/main/res/layout/fragment_food_details.xml" value="0.20416666666666666" />
-        <entry key="..\:/M3daaty-new/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/category_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/cuisine_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_cooking_pot.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_fill_2.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_svg.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_svg2.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_svg5.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_pot_svgrepo_com__5_.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_search_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_search_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/search_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/search_actoin.xml" value="0.2169230769230769" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/activity_food.xml" value="0.75" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/food_main.xml" value="0.25" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/fragment_category.xml" value="0.5" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/fragment_food_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/home_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/meal_result_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/search_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
+        <entry key="..\:/M3daaty-mvvm/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/M3daaty-mvvm/app/src/main/res/layout/item_nested_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/M3daaty-mvvm/app/src/main/res/layout/item_today_recipes.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
