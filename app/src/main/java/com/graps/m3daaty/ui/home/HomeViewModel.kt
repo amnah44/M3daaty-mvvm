@@ -11,6 +11,9 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
     private val _recipeToday = MutableLiveData<State<RandomRecipes>>()
     val recipeToday: LiveData<State<RandomRecipes>>
         get() = _recipeToday
+    private val _recipeRecommended = MutableLiveData<State<RandomRecipes>>()
+    val recipeRecommended: LiveData<State<RandomRecipes>>
+        get() = _recipeRecommended
 
     init {
         getRandomRecipesToday()
