@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.graps.m3daaty.model.domain.recipeSearch.Result" />
+            type="com.graps.m3daaty.model.domain.randomRecipes.Recipe" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 imageUrl="@{item.image}"
+                android:scaleType="fitXY"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
