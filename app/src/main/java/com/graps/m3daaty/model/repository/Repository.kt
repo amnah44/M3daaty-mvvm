@@ -25,7 +25,6 @@ object Repository {
                 )
         )
 
-
     fun getRecipeInfo(recipeId: Int) {
         wrapResponse(
             Api.spoonApi
