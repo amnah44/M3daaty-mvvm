@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="item"
+            type="com.graps.m3daaty.util.Cuisine" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.categoris.CategoryInteractionListener" />
 
     </data>
 
@@ -12,8 +18,8 @@
         android:layout_height="@dimen/category_item_height"
         app:cardBackgroundColor="@color/gray_200"
         app:cardCornerRadius="@dimen/category_item_radius"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,6 +29,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_category_height"
+                android:paddingTop="8dp"
                 android:src="@drawable/ic_bowl"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +43,7 @@
                 android:textColor="@color/dark_400_color"
                 android:textSize="@dimen/text_large"
                 android:textStyle="bold"
+                android:text="@{item.cuisineName}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
