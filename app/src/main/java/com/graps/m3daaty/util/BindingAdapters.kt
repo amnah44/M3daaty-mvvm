@@ -3,12 +3,8 @@ package com.graps.m3daaty.util
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
-import coil.Coil
 import coil.load
-import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.graps.m3daaty.R
 
@@ -20,13 +16,13 @@ fun onTextChanged(view: View, flag: Boolean){
         view.visibility = View.GONE
 }
 
-
-@BindingAdapter(value = ["imageUrl"])
-fun ImageView.seImageFromUrl(url: String?) {
-    Glide.with(this)
-        .load(url)
-        .into(this)
-}
+//
+//@BindingAdapter(value = ["imageUrl"])
+//fun ImageView.seImageFromUrl(url: String?) {
+//    Glide.with(this)
+//        .load(url)
+//        .into(this)
+//}
 
 @BindingAdapter(value = ["foodCost"])
 fun TextView.setText(isCheap: Boolean?) {
