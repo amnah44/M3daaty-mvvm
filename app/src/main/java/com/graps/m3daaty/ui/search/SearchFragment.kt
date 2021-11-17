@@ -7,6 +7,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.graps.m3daaty.R
 import com.graps.m3daaty.databinding.FragmentSearchBinding
+import com.graps.m3daaty.model.domain.recipeSearch.Result
 import com.graps.m3daaty.ui.base.BaseFragment
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
