@@ -8,7 +8,7 @@ class SpooncularApiInterceptor : Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
             .newBuilder()
-            .addHeader("apiKey", Constants.apiKey)
+            .addHeader("apiKey", Constants.BASHIR_API_KEY)
             .build()
         return chain.proceed(request)
     }

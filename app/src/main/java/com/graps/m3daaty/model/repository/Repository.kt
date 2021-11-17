@@ -1,6 +1,7 @@
 package com.graps.m3daaty.model.repository
 
 import com.graps.m3daaty.model.network.Api
+import com.graps.m3daaty.util.Constants
 import com.graps.m3daaty.util.State
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
@@ -15,13 +16,12 @@ object Repository {
             )
     )
 
-    fun getRecipeSearchResult(recipeName: String, cuisine: String?, recipesCount: Int?) =
+    fun getRecipeSearchResult(recipeName: String?) =
         wrapResponse(
             Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
-                    cuisine,
-                    recipesCount,
+                    Constants.BASHIR_API_KEY
                 )
         )
 

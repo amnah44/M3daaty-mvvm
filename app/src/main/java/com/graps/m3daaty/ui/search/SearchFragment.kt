@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import com.graps.m3daaty.R
 import com.graps.m3daaty.databinding.FragmentSearchBinding
 import com.graps.m3daaty.ui.base.BaseFragment
@@ -15,6 +16,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         DataBindingUtil::inflate
 
     override fun setupView() {
-
+        binding.viewModel = viewModel
+        binding.searchRecyclerView.adapter = SearchAdapter(mutableListOf(),viewModel)
     }
 }
