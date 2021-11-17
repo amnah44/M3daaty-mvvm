@@ -17,6 +17,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.let {
             it.viewModel = viewModel
             it.homeRecyclerView.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
+            it.recommendedRecycler.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
         }
     }
 }
