@@ -5,7 +5,6 @@ plugins {
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
 }
-
 android {
     compileSdk 31
 

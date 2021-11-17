@@ -2,12 +2,13 @@ package com.graps.m3daaty.util
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import coil.Coil
+import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.graps.m3daaty.R
+import com.graps.m3daaty.ui.base.BaseAdapter
 
 @BindingAdapter(value = ["onTextChanged"])
 fun onTextChanged(view: View, flag: Boolean){
@@ -15,6 +16,24 @@ fun onTextChanged(view: View, flag: Boolean){
         view.visibility = View.VISIBLE
     else
         view.visibility = View.GONE
+}
+
+//
+//@BindingAdapter(value = ["imageUrl"])
+//fun ImageView.seImageFromUrl(url: String?) {
+//    Glide.with(this)
+//        .load(url)
+//        .into(this)
+//}
+
+@BindingAdapter(value = ["foodCost"])
+fun TextView.setText(isCheap: Boolean?) {
+    if(isCheap == true){
+        this.text="Cheap"
+    }
+    else{
+        this.text="Expensive"
+    }
 }
 @BindingAdapter(value = ["imageUrl"])
 fun ImageView.setImageFromUrl(url: String?){
@@ -46,4 +65,13 @@ fun <T> showOnSuccess(view: View, state: State<T>?) {
         view.visibility = View.VISIBLE
     else
         view.visibility = View.GONE
+}
+
+@BindingAdapter(value = ["app:items"])
+fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
+    if (items != null) {
+        (view.adapter as BaseAdapter<T>?)?.setItems(items)
+    } else {
+        (view.adapter as BaseAdapter<T>?)?.setItems(emptyList())
+    }
 }

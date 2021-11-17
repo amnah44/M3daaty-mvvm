@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+
+    <corners android:radius="@dimen/card_details_bar_radius"/>
+    <solid android:color="@color/white_200"/>
+    <size android:height="@dimen/card_details_bar_width" android:width="@dimen/card_details_bar_height"/>
+
+</shape>
