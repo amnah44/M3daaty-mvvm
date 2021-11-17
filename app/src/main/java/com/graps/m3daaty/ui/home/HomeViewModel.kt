@@ -7,7 +7,7 @@ import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
 import com.graps.m3daaty.util.State
 
-class HomeViewModel : BaseViewModel() {
+class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
     private val _recipeToday = MutableLiveData<State<RandomRecipes>>()
     val recipeToday: LiveData<State<RandomRecipes>>
         get() = _recipeToday

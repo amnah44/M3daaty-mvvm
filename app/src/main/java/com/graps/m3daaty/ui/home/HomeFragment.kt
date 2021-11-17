@@ -16,7 +16,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun setupView() {
         binding.let {
             it.viewModel = viewModel
-//            it.homeRecyclerView.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
+            it.homeRecyclerView.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
         }
     }
 }
