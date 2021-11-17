@@ -26,7 +26,13 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
 
     private fun onSuccess(recipe: State<RandomRecipes>) = _recipeToday.postValue(recipe)
 
-    private fun onSuccessRecommended(recommended: State<RandomRecipes>) = _recipeRecommended.postValue(recommended)
+    private fun getRecommendedRecipe() {
+        _recipeRecommended.postValue(State.Loading)
+        observe(Repository.getRandomRecipes("veryPopular", 10), ::onSuccessRecommended, ::onError)
+    }
+
+    private fun onSuccessRecommended(recommended: State<RandomRecipes>) =
+        _recipeRecommended.postValue(recommended)
 
     private fun onError(throwable: Throwable) = State.Error(throwable.message.toString())
 
