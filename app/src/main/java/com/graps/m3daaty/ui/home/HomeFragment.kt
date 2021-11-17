@@ -14,6 +14,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
-
+        binding.let {
+            it.viewModel = viewModel
+//            it.homeRecyclerView.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
+        }
     }
 }
