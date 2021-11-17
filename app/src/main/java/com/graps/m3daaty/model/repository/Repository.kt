@@ -21,7 +21,7 @@ object Repository {
             Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
-                    Constants.BASHIR_API_KEY
+                    Constants.apiKey
                 )
         )
 
