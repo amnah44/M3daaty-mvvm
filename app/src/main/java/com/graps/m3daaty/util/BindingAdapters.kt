@@ -6,9 +6,9 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.graps.m3daaty.R
+import com.graps.m3daaty.ui.base.BaseAdapter
 
 @BindingAdapter(value = ["onTextChanged"])
 fun onTextChanged(view: View, flag: Boolean){
@@ -17,14 +17,6 @@ fun onTextChanged(view: View, flag: Boolean){
     else
         view.visibility = View.GONE
 }
-
-//
-//@BindingAdapter(value = ["imageUrl"])
-//fun ImageView.seImageFromUrl(url: String?) {
-//    Glide.with(this)
-//        .load(url)
-//        .into(this)
-//}
 
 @BindingAdapter(value = ["foodCost"])
 fun TextView.setText(isCheap: Boolean?) {
