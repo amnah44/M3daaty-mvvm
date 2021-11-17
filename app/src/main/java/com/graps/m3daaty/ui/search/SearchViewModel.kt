@@ -12,14 +12,16 @@ import java.util.concurrent.TimeUnit
 
 
 class SearchViewModel : BaseViewModel(), SearchInteractionListener {
-    private val _flag = MutableLiveData<Boolean>()
+    private val _loadingFlag = MutableLiveData<Boolean>()
+    private val _errorFlag = MutableLiveData<Boolean>()
     private val _searchResult = MutableLiveData<State<RecipeSearch?>?>()
 
     val searchResult: LiveData<State<RecipeSearch?>?> = _searchResult
-    val flag: LiveData<Boolean> = _flag
-
+    val loadingFlag: LiveData<Boolean> = _loadingFlag
+    val errorFlag: LiveData<Boolean> = _errorFlag
     init {
-        _flag.postValue(true)
+        _loadingFlag.postValue(true)
+        _errorFlag.postValue(false)
     }
 
     override fun onSearchItemClicked(result: Result) {
@@ -27,9 +29,9 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     }
 
     fun onSearchTextChanged(text: CharSequence?) {
-        _flag.postValue(false)
+        _loadingFlag.postValue(false)
         if (text.isNullOrEmpty()) {
-            _flag.postValue(true)
+            _loadingFlag.postValue(true)
             _searchResult.postValue(null)
         } else {
             observe(
@@ -41,6 +43,10 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
 
     private fun onSearchSuccess(result: State<RecipeSearch>) {
         _searchResult.postValue(result)
+        if(_searchResult.value?.toData()?.results?.isEmpty()==true)
+            _errorFlag.postValue(true)
+        else
+            _errorFlag.postValue(false)
         Log.i("SEARCH_RESULT", searchResult.value?.toData()?.results.toString())
     }
 

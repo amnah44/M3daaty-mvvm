@@ -59,17 +59,35 @@
             tools:listitem="@layout/item_search" />
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottieAnimationView"
+            android:id="@+id/load_lotti"
+            onTextChanged="@{viewModel.loadingFlag}"
             android:layout_width="@dimen/search_animation_width"
             android:layout_height="@dimen/search_animation_height"
             android:layout_margin="@dimen/margin_medium"
-            onTextChanged="@{viewModel.flag}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_search"
-            app:lottie_loop="false"
+            app:layout_constraintVertical_bias="0.507"
             app:lottie_autoPlay="true"
+            app:lottie_loop="false"
             app:lottie_rawRes="@raw/recipe_search_lottie" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/error_lotti"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/margin_medium"
+            onTextChanged="@{viewModel.errorFlag}"
+            app:layout_constraintBottom_toBottomOf="@+id/search_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/salad_cat"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

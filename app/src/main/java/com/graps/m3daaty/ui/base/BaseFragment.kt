@@ -11,7 +11,6 @@ import com.graps.m3daaty.BR
 
 abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId: Int) : Fragment() {
 
-    protected abstract val LOG_TAG: String
     abstract val viewModel: BaseViewModel
 
     private lateinit var _binding: VDB
@@ -37,8 +36,4 @@ abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId:
     }
 
     abstract fun setupView()
-
-    protected fun log(value: Any) {
-        Log.v(LOG_TAG, value.toString())
-    }
 }

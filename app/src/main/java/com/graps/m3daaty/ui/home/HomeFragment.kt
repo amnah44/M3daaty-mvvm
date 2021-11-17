@@ -9,13 +9,14 @@ import com.graps.m3daaty.databinding.FragmentHomeBinding
 import com.graps.m3daaty.ui.base.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
-    override val LOG_TAG: String
-        get() = TODO("Not yet implemented")
     override val viewModel by activityViewModels<HomeViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentHomeBinding =
         DataBindingUtil::inflate
 
     override fun setupView() {
-
+        binding.let {
+            it.viewModel = viewModel
+            it.homeRecyclerView.adapter = RandomRecipesAdapter(mutableListOf(), viewModel)
+        }
     }
 }
