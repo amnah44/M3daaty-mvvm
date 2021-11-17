@@ -22,8 +22,7 @@ interface SpoonApiService {
     @GET("complexSearch")
     fun getRecipeSearchResult(
         @Query("query") recipeName:String?,
-        @Query("cuisine") cuisine:String?,
-        @Query("number") recipesCount: Int?
+        @Query("apiKey") apiKey: String?
     ) : Single<Response<RecipeSearch>>
 
     @GET("{id}/information")
@@ -40,5 +39,4 @@ interface SpoonApiService {
     fun getRecipeNutrition(
         @Path("id") recipeId:Int
     ) : Single<Response<RecipeNutrition>>
-
 }

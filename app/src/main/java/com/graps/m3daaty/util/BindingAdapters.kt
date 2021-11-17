@@ -6,9 +6,9 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.graps.m3daaty.R
-import com.graps.m3daaty.ui.base.BaseAdapter
 
 @BindingAdapter(value = ["onTextChanged"])
 fun onTextChanged(view: View, flag: Boolean){
@@ -66,12 +66,11 @@ fun <T> showOnSuccess(view: View, state: State<T>?) {
     else
         view.visibility = View.GONE
 }
-
-@BindingAdapter(value = ["app:items"])
+@BindingAdapter(value = ["app:recycleViewItems"])
 fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     if (items != null) {
-        (view.adapter as BaseAdapter<T>?)?.setItems(items)
+        (view.adapter as BaseAdapter<T>)?.setItems(items)
     } else {
-        (view.adapter as BaseAdapter<T>?)?.setItems(emptyList())
+        (view.adapter as BaseAdapter<T>)?.setItems(emptyList())
     }
 }

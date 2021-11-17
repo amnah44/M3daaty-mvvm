@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_medium"
             android:padding="@dimen/padding_small"
+            android:onTextChanged="@{(text,start,before,count)->viewModel.onSearchTextChanged(text)}"
             android:drawablePadding="@dimen/padding_small"
             android:background="@drawable/search_rounded_view"
             android:drawableStart="@drawable/ic_search"
@@ -47,6 +48,8 @@
             android:layout_height="0dp"
             android:layout_margin="@dimen/margin_medium"
             android:orientation="vertical"
+            app:showOnSuccess="@{viewModel.searchResult}"
+            app:recycleViewItems="@{viewModel.searchResult.toData().results}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,11 +63,13 @@
             android:layout_width="@dimen/search_animation_width"
             android:layout_height="@dimen/search_animation_height"
             android:layout_margin="@dimen/margin_medium"
+            onTextChanged="@{viewModel.flag}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_search"
-            app:lottie_loop="true"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="true"
             app:lottie_rawRes="@raw/recipe_search_lottie" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
