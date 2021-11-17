@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="item"
+            type="com.graps.m3daaty.model.domain.randomRecipes.Recipe" />
     </data>
 
     <androidx.cardview.widget.CardView
