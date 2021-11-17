@@ -1,31 +1,31 @@
 package com.graps.m3daaty.util
 
-enum class Category {
-    african,
-    american,
-    british,
-    cajun,
-    caribbean,
-    chinese,
-    easterneuropean,
-    european,
-    french,
-    german,
-    greek,
-    indian,
-    irish,
-    italian,
-    japanese,
-    jewish,
-    korean,
-    latinamerican,
-    mediterranean,
-    mexican,
-    middleeastern,
-    nordic,
-    southern,
-    spanish,
-    thai,
-    vietnamese,
+object Category {
+    const val AFRICAN = "african"
+    const val AMERICAN  = "american"
+    const val BRITISH = "british"
+    const val  CAJUN = "cajun"
+    const val CARIBBEAN = "caribbean"
+    const val CHINESE = "chinese"
+    const val EASTERNEUROPEAN = "eastern european"
+    const val EUROPEAN = "european"
+    const val FRENCH ="french"
+    const val GERMAN = "german"
+    const val GREEK = "greek"
+    const val INDIAN = "indian"
+    const val IRISH = "irish"
+    const val ITALIAN ="italian"
+    const val JAPANESE ="japanese"
+    const val JEWISH = "jewish"
+    const val KOREAN = "korean"
+    const val LATINAMERICAN = "latin american"
+    const val MEDITERRANEAN ="mediterranean"
+    const val MEXICAN = "mexican"
+    const val MIDDLEEASTERN ="middle eastern"
+    const val NORDIC ="nordic"
+    const val  SOUTHERN= "southern"
+    const val SPANISH ="spanish"
+    const val THAI ="thai"
+    const val VIETNAMESE ="vietnamese"
 
 }
