@@ -15,9 +15,9 @@ class FoodDetailsFragment : BaseFragment<FragmentFoodDetailsBinding>(R.layout.fr
     override val LOG_TAG: String=Constants.FOOD_DETAILS_FRAGMENT
     override val viewModel: FoodDetailsViewModel by activityViewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentFoodDetailsBinding=DataBindingUtil::inflate
-    private val  arg:FoodDetailsFragmentArgs by navArgs()
+//    private val  arg:FoodDetailsFragmentArgs by navArgs()
     override fun setupView() {
-        val recipe=arg.recipeData
+//        val recipe=arg.recipeData
         binding.viewModel=viewModel
         binding.recyclerIngredients.adapter=IngredientsAdapter(mutableListOf(), viewModel)
     }

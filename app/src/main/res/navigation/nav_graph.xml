@@ -20,9 +20,9 @@
         android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
         android:label="FoodDetailsFragment"
         tools:layout="@layout/fragment_food_details">
-        <argument
-            android:name="recipeData"
-            app:argType="com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation" />
+<!--        <argument-->
+<!--            android:name="recipeData"-->
+<!--            app:argType="com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation" />-->
     </fragment>
     <fragment
         android:id="@+id/mealResultFragment"

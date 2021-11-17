@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.graps.m3daaty.model.domain.getRecipeInformationResponse.ExtendedIngredient" />
+            type="com.graps.m3daaty.model.domain.recipeInformation.ExtendedIngredient" />
         <variable
             name="listener"
             type="com.graps.m3daaty.ui.details.IngredientsAndDirectionInteractionListener" />
