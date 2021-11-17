@@ -7,7 +7,6 @@ import io.reactivex.rxjava3.core.Single
 import retrofit2.Response
 
 object Repository {
-
     fun getRandomRecipes(filterTag: String?, recipesCount: Int?) = wrapResponse(
         Api.spoonApi
             .getRandomRecipes(
@@ -15,16 +14,14 @@ object Repository {
                 recipesCount,
             )
     )
-
     fun getRecipeSearchResult(recipeName: String?) =
         wrapResponse(
             Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
-                    Constants.apiKey
+                    Constants.BASHIR_API_KEY
                 )
         )
-
     fun getRecipeInfo(recipeId: Int) {
         wrapResponse(
             Api.spoonApi
@@ -33,21 +30,18 @@ object Repository {
                 )
         )
     }
-
     fun getRecipeTaste(recipeId: Int) = wrapResponse(
         Api.spoonApi
             .getRecipeTaste(
                 recipeId,
             )
     )
-
     fun getRecipeNutrition(recipeId: Int) = wrapResponse(
         Api.spoonApi
             .getRecipeNutrition(
                 recipeId
             )
     )
-
 
     private fun <T> wrapResponse(response: Single<Response<T>>): Single<State<T>> {
         return response.map {
