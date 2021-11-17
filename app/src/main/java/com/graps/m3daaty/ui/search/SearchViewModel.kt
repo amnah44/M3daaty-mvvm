@@ -7,11 +7,9 @@ import com.graps.m3daaty.model.domain.recipeSearch.RecipeSearch
 import com.graps.m3daaty.model.domain.recipeSearch.Result
 import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
-import com.graps.m3daaty.util.Constants
 import com.graps.m3daaty.util.State
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
+
 
 class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     private val _flag = MutableLiveData<Boolean>()
@@ -35,7 +33,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
             _searchResult.postValue(null)
         } else {
             observe(
-                Repository.getRecipeSearchResult(text.toString()).delaySubscription(1000L,TimeUnit.MILLISECONDS),
+                Repository.getRecipeSearchResult(text.toString()).delaySubscription(1000L, TimeUnit.MILLISECONDS),
                 ::onSearchSuccess, ::onSearchError
             )
         }

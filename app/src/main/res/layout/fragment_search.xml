@@ -49,7 +49,7 @@
             android:layout_margin="@dimen/margin_medium"
             android:orientation="vertical"
             app:showOnSuccess="@{viewModel.searchResult}"
-            app:recycleViewItems="@{viewModel.searchResult.toData().results}"
+            app:items="@{viewModel.searchResult.toData().results}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
