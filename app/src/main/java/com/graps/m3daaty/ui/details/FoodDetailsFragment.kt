@@ -12,7 +12,6 @@ import com.graps.m3daaty.ui.base.BaseFragment
 import com.graps.m3daaty.util.Constants
 
 class FoodDetailsFragment : BaseFragment<FragmentFoodDetailsBinding>(R.layout.fragment_food_details){
-    override val LOG_TAG: String=Constants.FOOD_DETAILS_FRAGMENT
     override val viewModel: FoodDetailsViewModel by activityViewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentFoodDetailsBinding=DataBindingUtil::inflate
 //    private val  arg:FoodDetailsFragmentArgs by navArgs()

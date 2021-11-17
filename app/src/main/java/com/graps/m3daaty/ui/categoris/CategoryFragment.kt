@@ -12,8 +12,6 @@ import com.graps.m3daaty.ui.base.BaseFragment
 import com.graps.m3daaty.util.CuisineList
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
-    override val LOG_TAG: String
-        get() = CategoryFragment::class.java.simpleName
     override val viewModel: CategoryViewModel
         get() = CategoryViewModel()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCategoryBinding
