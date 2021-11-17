@@ -12,7 +12,7 @@ object Repository {
             .getRandomRecipes(
                 filterTag,
                 recipesCount,
-                Constants.apiKey
+                Constants.AMNAH_API_KEY
             )
     )
     fun getRecipeSearchResult(recipeName: String?) =
@@ -20,7 +20,7 @@ object Repository {
             Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
-                    Constants.apiKey
+                    Constants.AMNAH_API_KEY
                 )
         )
     fun getRecipeInfo(recipeId: Int) {
@@ -28,7 +28,7 @@ object Repository {
             Api.spoonApi
                 .getRecipeInfo(
                     recipeId,
-                    Constants.apiKey
+                    Constants.AMNAH_API_KEY
                 )
         )
     }
@@ -36,14 +36,14 @@ object Repository {
         Api.spoonApi
             .getRecipeTaste(
                 recipeId,
-                Constants.apiKey
+                Constants.AMNAH_API_KEY
             )
     )
     fun getRecipeNutrition(recipeId: Int) = wrapResponse(
         Api.spoonApi
             .getRecipeNutrition(
                 recipeId,
-                Constants.apiKey
+                Constants.AMNAH_API_KEY
             )
     )
 
