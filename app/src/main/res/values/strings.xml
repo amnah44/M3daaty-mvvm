@@ -2,4 +2,6 @@
     <string name="app_name">M3daaty</string>
     <string name="search_for_your_recipe">Search for your recipe</string>
     <string name="search">Search...</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="directions">Directions:</string>
 </resources>

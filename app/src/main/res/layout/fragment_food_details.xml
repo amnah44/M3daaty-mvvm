@@ -1,13 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="itemRecipe"
+            type="com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.details.IngredientsAndDirectionInteractionListener" />
+        <variable
+            name="viewModel"
+            type="com.graps.m3daaty.ui.details.FoodDetailsViewModel" />
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_food_details_scene">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_food"
+            style="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            imageUrl="@{itemRecipe.image}"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="H,77:70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/image_pizza" />
+
+        <TextView
+            android:id="@+id/text_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_details_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/gray_200"
+            app:cardCornerRadius="18dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/head_bar"
+                    android:layout_width="128dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@drawable/card_details_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_food_name"
+                    android:text="@{itemRecipe.title}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_xx_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/head_bar"
+                    tools:text="Rais al3aasfoor" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_time"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_x_large"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    app:cardBackgroundColor="@color/white_140_color"
+                    app:cardCornerRadius="@dimen/card_radius_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_food_name">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/icon_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_alarm_clock_alt"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{itemRecipe.readyInMinutes}"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textColor="@color/green_color"
+                            android:textSize="@dimen/text_medium"
+                            app:layout_constraintEnd_toEndOf="@id/icon_timer"
+                            app:layout_constraintStart_toStartOf="@id/icon_timer"
+                            app:layout_constraintTop_toBottomOf="@id/icon_timer"
+                            tools:text="40 min" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_middle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_large"
+                    app:cardBackgroundColor="@color/orange_color_100"
+                    app:cardCornerRadius="@dimen/card_radius_medium"
+                    app:layout_constraintStart_toEndOf="@id/card_time"
+                    app:layout_constraintTop_toTopOf="@id/card_time">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/icon_smile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_twotone_emoji_emotions_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_smile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            foodCost="@{itemRecipe.cheap}"
+                            android:textColor="@color/orange_color_200"
+                            android:textSize="@dimen/text_medium"
+                            app:layout_constraintEnd_toEndOf="@id/icon_smile"
+                            app:layout_constraintStart_toStartOf="@id/icon_smile"
+                            app:layout_constraintTop_toBottomOf="@id/icon_smile"
+                            tools:text="Medium" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_calories"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="@dimen/margin_x_large"
+                    app:cardBackgroundColor="@color/white_200_color"
+                    app:cardCornerRadius="@dimen/card_radius_medium"
+                    app:layout_constraintStart_toEndOf="@id/card_middle"
+                    app:layout_constraintTop_toTopOf="@id/card_middle">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/icon_calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_little"
+                            android:src="@drawable/ic_baseline_local_fire_department_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_calories_number"
+                            android:layout_width="29dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textAlignment="center"
+                            android:text="@{itemRecipe.sourceName}"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/icon_calories"
+                            app:layout_constraintStart_toStartOf="@id/icon_calories"
+                            app:layout_constraintTop_toBottomOf="@id/icon_calories"
+                            tools:text="300" />
+
+                        <TextView
+                            android:id="@+id/text_calories_metric"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_little"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Cal/serving"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/text_calories_number"
+                            app:layout_constraintStart_toStartOf="@id/text_calories_number"
+                            app:layout_constraintTop_toBottomOf="@id/text_calories_number" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_time" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:items="@{itemRecipe.extendedIngredients}"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintStart_toStartOf="@id/text_ingredients"
+                    app:layout_constraintTop_toBottomOf="@id/text_ingredients"
+                    tools:listitem="@layout/item_ingredients"/>
+
+                <TextView
+                    android:id="@+id/text_direction_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_little"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/directions"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
+
+                <TextView
+                    android:id="@+id/text_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemRecipe.instructions}"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:layout_constraintStart_toStartOf="@id/text_direction_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_direction_word"
+                    tools:listitem="@layout/item_ingredients"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>

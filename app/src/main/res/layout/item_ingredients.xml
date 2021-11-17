@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.graps.m3daaty.model.domain.getRecipeInformationResponse.ExtendedIngredient" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.details.IngredientsAndDirectionInteractionListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/gray_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_cicle_orange"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/circle_orange" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/view_cicle_orange"
+                app:layout_constraintTop_toTopOf="@id/view_cicle_orange"
+                app:layout_constraintBottom_toBottomOf="@id/view_cicle_orange"
+                android:textSize="@dimen/text_small"
+                android:text="@{item.name}"
+                android:layout_marginStart="@dimen/margin_small"
+                android:fontFamily="@font/robotor_egular"
+                android:textColor="@color/dark_400_color"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

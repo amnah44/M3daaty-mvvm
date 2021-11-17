@@ -12,7 +12,7 @@
     <dimen name="text_large">14sp</dimen>
     <dimen name="text_medium">12sp</dimen>
     <dimen name="text_small">10sp</dimen>
-    <dimen name="text_xx_large">20</dimen>
+    <dimen name="text_xx_large">20sp</dimen>
     <dimen name="padding_small">10dp</dimen>
     <dimen name="search_animation_width">300dp</dimen>
     <dimen name="search_animation_height">300dp</dimen>
@@ -24,6 +24,11 @@
     <dimen name="item_search_height">200dp</dimen>
     <dimen name="item_search_radius">8dp</dimen>
     <dimen name="margin_large">32dp</dimen>
+    <dimen name="card_details_bar_width">2dp</dimen>
+    <dimen name="card_details_bar_height">32dp</dimen>
+    <dimen name="card_details_bar_radius">16dp</dimen>
+    <dimen name="margin_x_large">45dp</dimen>
+    <dimen name="card_radius_medium">16dp</dimen>
 
 
 </resources>
