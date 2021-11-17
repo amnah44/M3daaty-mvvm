@@ -68,7 +68,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/margin_small"
             android:orientation="vertical"
-            app:items="@{viewModel.s.cuisineList}"
+            app:items="@{viewModel.cuisineList.cuisineList}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

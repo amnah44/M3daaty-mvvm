@@ -14,7 +14,7 @@ class CategoryViewModel : BaseViewModel(),CategoryInteractionListener {
 
     private val _category = MutableLiveData<List<CuisineList>>()
     val category:LiveData<List<CuisineList>> get()= _category
-    val s = CuisineList()
+    val cuisineList = CuisineList()
 
 
     init {
