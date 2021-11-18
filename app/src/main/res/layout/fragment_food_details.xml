@@ -34,20 +34,27 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/image_pizza" />
 
-        <TextView
-            android:id="@+id/text_test"
+        <ImageView
+            android:id="@+id/back_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_large"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/back_arrow"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guid_line_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_details_text"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/gray_200"
             app:cardCornerRadius="18dp">
 
@@ -177,50 +184,147 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/icon_calories"
+                            android:id="@+id/icon_likes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/margin_little"
-                            android:src="@drawable/ic_baseline_local_fire_department_24"
+                            android:src="@drawable/ic_like"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/text_calories_number"
+                            android:id="@+id/text_likes_number"
                             android:layout_width="29dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin_small"
                             android:fontFamily="@font/roboto_bold"
                             android:textAlignment="center"
-                            android:text="@{itemRecipe.sourceName}"
+                            android:text="@{itemRecipe.aggregateLikes}"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@id/icon_calories"
-                            app:layout_constraintStart_toStartOf="@id/icon_calories"
-                            app:layout_constraintTop_toBottomOf="@id/icon_calories"
+                            app:layout_constraintEnd_toEndOf="@id/icon_likes"
+                            app:layout_constraintStart_toStartOf="@id/icon_likes"
+                            app:layout_constraintTop_toBottomOf="@id/icon_likes"
                             tools:text="300" />
 
-                        <TextView
-                            android:id="@+id/text_calories_metric"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/margin_little"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Cal/serving"
-                            android:textAlignment="center"
-                            android:textColor="@color/blue"
-                            android:textSize="@dimen/text_small"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@id/text_calories_number"
-                            app:layout_constraintStart_toStartOf="@id/text_calories_number"
-                            app:layout_constraintTop_toBottomOf="@id/text_calories_number" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_score_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/health_score"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_time"/>
+
+                <View
+                    android:id="@+id/view_circle_score"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_score_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_score_word"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_score"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_score"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_score"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:text="@{String.valueOf(itemRecipe.healthScore)}"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    tools:text="44.0"/>
+
+
+
+                <TextView
+                    android:id="@+id/text_costPerServing_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/price_per_serving"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_circle_score"/>
+
+                <View
+                    android:id="@+id/view_circle_cost"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_costPerServing_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_costPerServing_word"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_cost"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_cost"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_cost"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:text="@{String.valueOf(itemRecipe.pricePerServing)}"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    tools:text="333"/>
+
+                <TextView
+                    android:id="@+id/text_Popular_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/popularity"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_circle_cost"/>
+
+                <View
+                    android:id="@+id/view_circle_popular"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_Popular_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_Popular_word"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+
+                <TextView
+                    android:id="@+id/text_score_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_popular"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_popular"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_popular"
+                    foodPopularity="@{itemRecipe.veryPopular}"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    tools:text="Not popular"/>
+
 
                 <TextView
                     android:id="@+id/text_ingredients"
@@ -232,7 +336,7 @@
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_time" />
+                    app:layout_constraintTop_toBottomOf="@id/text_score_popular" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_ingredients"
@@ -244,27 +348,8 @@
                     app:layout_constraintTop_toBottomOf="@id/text_ingredients"
                     tools:listitem="@layout/item_ingredients"/>
 
-                <TextView
-                    android:id="@+id/text_direction_word"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_little"
-                    android:fontFamily="@font/robotor_egular"
-                    android:text="@string/directions"
-                    android:textColor="@color/dark_400_color"
-                    android:textSize="@dimen/text_large"
-                    app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
-                    app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
 
-                <TextView
-                    android:id="@+id/text_direction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{itemRecipe.instructions}"
-                    android:layout_marginTop="@dimen/margin_small"
-                    app:layout_constraintStart_toStartOf="@id/text_direction_word"
-                    app:layout_constraintTop_toBottomOf="@id/text_direction_word"
-                    tools:listitem="@layout/item_ingredients"/>
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

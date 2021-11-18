@@ -27,6 +27,16 @@ fun TextView.setText(isCheap: Boolean?) {
         this.text="Expensive"
     }
 }
+
+@BindingAdapter(value = ["foodPopularity"])
+fun TextView.setPopularText(isPopular: Boolean?) {
+    if(isPopular == true){
+        this.text="Very Popular"
+    }
+    else{
+        this.text="Not Popular"
+    }
+}
 @BindingAdapter(value = ["imageUrl"])
 fun ImageView.setImageFromUrl(url: String?){
     this.load(url){

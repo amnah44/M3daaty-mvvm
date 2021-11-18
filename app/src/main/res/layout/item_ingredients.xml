@@ -23,8 +23,8 @@
 
             <View
                 android:id="@+id/view_cicle_orange"
-                android:layout_width="9dp"
-                android:layout_height="9dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="4dp"
@@ -38,7 +38,7 @@
                 app:layout_constraintTop_toTopOf="@id/view_cicle_orange"
                 app:layout_constraintBottom_toBottomOf="@id/view_cicle_orange"
                 android:textSize="@dimen/text_small"
-                android:text="@{item.name}"
+                android:text="@{item.original}"
                 android:layout_marginStart="@dimen/margin_small"
                 android:fontFamily="@font/robotor_egular"
                 android:textColor="@color/dark_400_color"
