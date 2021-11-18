@@ -177,46 +177,32 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/icon_calories"
+                            android:id="@+id/icon_likes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/margin_little"
-                            android:src="@drawable/ic_baseline_local_fire_department_24"
+                            android:src="@drawable/ic_like"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/text_calories_number"
+                            android:id="@+id/text_likes_number"
                             android:layout_width="29dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginBottom="@dimen/margin_small"
                             android:fontFamily="@font/roboto_bold"
                             android:textAlignment="center"
-                            android:text="@{itemRecipe.sourceName}"
+                            android:text="@{itemRecipe.aggregateLikes}"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@id/icon_calories"
-                            app:layout_constraintStart_toStartOf="@id/icon_calories"
-                            app:layout_constraintTop_toBottomOf="@id/icon_calories"
+                            app:layout_constraintEnd_toEndOf="@id/icon_likes"
+                            app:layout_constraintStart_toStartOf="@id/icon_likes"
+                            app:layout_constraintTop_toBottomOf="@id/icon_likes"
                             tools:text="300" />
 
-                        <TextView
-                            android:id="@+id/text_calories_metric"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/margin_little"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Cal/serving"
-                            android:textAlignment="center"
-                            android:textColor="@color/blue"
-                            android:textSize="@dimen/text_small"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@id/text_calories_number"
-                            app:layout_constraintStart_toStartOf="@id/text_calories_number"
-                            app:layout_constraintTop_toBottomOf="@id/text_calories_number" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
