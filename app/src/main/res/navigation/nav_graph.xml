@@ -19,13 +19,10 @@
         android:id="@+id/foodDetailsFragment"
         android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
         android:label="FoodDetailsFragment"
-        tools:layout="@layout/fragment_food_details">
-<!--        <argument-->
-<!--            android:name="recipeData"-->
-<!--            app:argType="com.graps.m3daaty.model.domain.getRecipeInformationResponse.RecipeInformation" />-->
-    </fragment>
+        tools:layout="@layout/fragment_food_details"/>
+
     <fragment
-        android:id="@+id/mealResultFragment"
+        android:id="@+id/cuisine_recipe"
         android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
         android:label="MealResultFragment"
         tools:layout="@layout/fragment_meal_result"/>
