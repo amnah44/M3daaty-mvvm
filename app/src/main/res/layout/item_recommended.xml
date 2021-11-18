@@ -33,7 +33,7 @@
                 app:layout_constraintDimensionRatio="H,100:81"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintWidth_percent="0.3"
                 tools:src="@drawable/recipe_1"/>
 
             <TextView
