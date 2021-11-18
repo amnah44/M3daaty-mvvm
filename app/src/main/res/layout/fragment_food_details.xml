@@ -305,6 +305,7 @@
 
 
                 <TextView
+                    android:id="@+id/text_score_popular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toEndOf="@id/view_circle_popular"
@@ -321,13 +322,13 @@
                     android:id="@+id/text_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="220dp"
+                    android:layout_margin="@dimen/margin_large"
                     android:fontFamily="@font/robotor_egular"
                     android:text="@string/ingredients"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_score_word" />
+                    app:layout_constraintTop_toBottomOf="@id/text_score_popular" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_ingredients"
