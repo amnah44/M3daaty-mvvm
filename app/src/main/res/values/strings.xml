@@ -10,5 +10,6 @@
     <string name="string_recipe_image">recipe image</string>
     <string name="health_score">Health Score</string>
     <string name="price_per_serving">Price Per Serving</string>
+    <string name="popularity">Popularity</string>
 
 </resources>
