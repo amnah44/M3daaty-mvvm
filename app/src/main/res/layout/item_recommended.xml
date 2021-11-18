@@ -44,6 +44,8 @@
                 android:layout_marginTop="@dimen/margin_small"
                 android:fontFamily="@font/palanquin_dark_regular"
                 android:text="@{item.title}"
+                android:lines="1"
+                android:ellipsize="end"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/meal_image"
