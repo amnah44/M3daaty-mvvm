@@ -23,8 +23,8 @@
 
             <View
                 android:id="@+id/view_cicle_orange"
-                android:layout_width="9dp"
-                android:layout_height="9dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="4dp"

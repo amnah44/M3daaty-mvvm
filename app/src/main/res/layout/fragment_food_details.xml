@@ -209,16 +209,50 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/text_ingredients"
+                    android:id="@+id/text_score_word"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="@string/health_score"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_time"/>
+
+                <View
+                    android:id="@+id/view_cicle_orange"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_score_word"
+                    app:layout_constraintTop_toBottomOf="@id/text_score_word"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_cicle_orange"
+                    app:layout_constraintTop_toTopOf="@id/view_cicle_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/view_cicle_orange"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:text="@{String.valueOf(itemRecipe.healthScore)}"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    tools:text="44.0"/>
+                <TextView
+                    android:id="@+id/text_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="120dp"
                     android:fontFamily="@font/robotor_egular"
                     android:text="@string/ingredients"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_time" />
+                    app:layout_constraintTop_toBottomOf="@id/text_score_word" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_ingredients"
