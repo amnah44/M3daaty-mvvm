@@ -9,7 +9,7 @@
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_food"/>
+        app:layout_constraintTop_toBottomOf="@id/Guid_line_horizontal"/>
         <Constraint
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
