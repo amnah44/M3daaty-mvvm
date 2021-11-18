@@ -7,7 +7,7 @@ import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
 import com.graps.m3daaty.util.State
 
-class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
+class HomeViewModel : BaseViewModel(), IRandomInteractionListener, RecommendedInteractionListener {
     private val _recipeToday = MutableLiveData<State<RandomRecipes>>()
     val recipeToday: LiveData<State<RandomRecipes>>
         get() = _recipeToday
@@ -17,6 +17,7 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
 
     init {
         getRandomRecipesToday()
+        getRecommendedRecipe()
     }
 
     private fun getRandomRecipesToday(){
@@ -28,7 +29,7 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
 
     private fun getRecommendedRecipe() {
         _recipeRecommended.postValue(State.Loading)
-        observe(Repository.getRandomRecipes("veryPopular", 10), ::onSuccessRecommended, ::onError)
+        observe(Repository.getRandomRecipes("main course", 10), ::onSuccessRecommended, ::onError)
     }
 
     private fun onSuccessRecommended(recommended: State<RandomRecipes>) =
