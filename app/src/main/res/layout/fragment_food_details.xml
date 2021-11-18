@@ -230,26 +230,8 @@
                     app:layout_constraintTop_toBottomOf="@id/text_ingredients"
                     tools:listitem="@layout/item_ingredients"/>
 
-                <TextView
-                    android:id="@+id/text_direction_word"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_little"
-                    android:fontFamily="@font/robotor_egular"
-                    android:text="@string/directions"
-                    android:textColor="@color/dark_400_color"
-                    android:textSize="@dimen/text_large"
-                    app:layout_constraintStart_toStartOf="@id/recycler_ingredients"
-                    app:layout_constraintTop_toBottomOf="@id/recycler_ingredients" />
 
-                <TextView
-                    android:id="@+id/text_direction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{itemRecipe.instructions}"
-                    android:layout_marginTop="@dimen/margin_small"
-                    app:layout_constraintStart_toStartOf="@id/text_direction_word"
-                    app:layout_constraintTop_toBottomOf="@id/text_direction_word" />
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
