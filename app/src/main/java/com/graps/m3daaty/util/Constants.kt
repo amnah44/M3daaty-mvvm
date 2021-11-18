@@ -8,4 +8,5 @@ object Constants {
     const val AMNAH_API_KEY = "01b3a537512f4ec283c75859c506d232"
     const val FOOD_DETAILS_FRAGMENT="food details fragment"
     const val BASHIR_API_KEY = "e8a5171e09d44a1bae3dff26eef7c4de"
+    const val ANWAR_API_KEY = "56edaac8efbf4c56aab0ebf76fe60177"
 }

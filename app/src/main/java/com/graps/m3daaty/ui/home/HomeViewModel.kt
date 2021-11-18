@@ -11,6 +11,9 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
     private val _recipeToday = MutableLiveData<State<RandomRecipes>>()
     val recipeToday: LiveData<State<RandomRecipes>>
         get() = _recipeToday
+    private val _recipeRecommended = MutableLiveData<State<RandomRecipes>>()
+    val recipeRecommended: LiveData<State<RandomRecipes>>
+        get() = _recipeRecommended
 
     init {
         getRandomRecipesToday()
@@ -22,6 +25,15 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener {
     }
 
     private fun onSuccess(recipe: State<RandomRecipes>) = _recipeToday.postValue(recipe)
+
+    private fun getRecommendedRecipe() {
+        _recipeRecommended.postValue(State.Loading)
+        observe(Repository.getRandomRecipes("veryPopular", 10), ::onSuccessRecommended, ::onError)
+    }
+
+    private fun onSuccessRecommended(recommended: State<RandomRecipes>) =
+        _recipeRecommended.postValue(recommended)
+
     private fun onError(throwable: Throwable) = State.Error(throwable.message.toString())
 
 }
