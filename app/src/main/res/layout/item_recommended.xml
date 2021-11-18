@@ -51,22 +51,19 @@
                 tools:text="Strawberry Scones"/>
 
             <TextView
-                android:id="@+id/recipe_summary"
+                android:id="@+id/recipe_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_little"
                 android:fontFamily="@font/oxygen_regular"
-                android:lines="3"
-                android:paddingEnd="8dp"
-                android:text="@{item.summary + `...`}"
+                android:text="@{ `Ready in minutes: ` + item.readyInMinutes}"
                 android:textSize="12sp"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/meal_name"
                 app:layout_constraintTop_toBottomOf="@id/meal_name"
-                app:layout_constraintVertical_bias="0.0"
-                tools:text="trawberry Scones is a lacto ovo vegetarian morn meal. One serving contains 272 calories, 5g of protein, and 13g of fat."/>
+                app:layout_constraintVertical_bias="0.0"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
