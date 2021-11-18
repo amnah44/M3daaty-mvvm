@@ -16,4 +16,8 @@
     <style name="ShapeAppearanceOverlay.App.CornerSize15Percent" parent="">
         <item name="cornerSize">8%</item>
     </style>
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_layout</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
 </resources>

@@ -13,6 +13,7 @@ class M3daatyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_M3daaty)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_m3daaty)
     }
 
