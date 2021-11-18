@@ -311,6 +311,7 @@
                     app:layout_constraintStart_toEndOf="@id/view_circle_popular"
                     app:layout_constraintTop_toTopOf="@id/view_circle_popular"
                     app:layout_constraintBottom_toBottomOf="@id/view_circle_popular"
+                    foodPopularity="@{itemRecipe.veryPopular}"
                     android:layout_marginStart="@dimen/margin_small"
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
