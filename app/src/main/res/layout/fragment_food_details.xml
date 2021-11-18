@@ -34,6 +34,16 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/image_pizza" />
 
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:src="@drawable/back_arrow"/>
+
         <TextView
             android:id="@+id/text_test"
             android:layout_width="wrap_content"
