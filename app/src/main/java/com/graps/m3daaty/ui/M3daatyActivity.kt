@@ -21,5 +21,6 @@ class M3daatyActivity : AppCompatActivity() {
         super.onResume()
         val navController = findNavController(R.id.parent_container)
         _binding.bottomNav.setupWithNavController(navController)
+        _binding.bottomNav.itemIconTintList = null
     }
 }
