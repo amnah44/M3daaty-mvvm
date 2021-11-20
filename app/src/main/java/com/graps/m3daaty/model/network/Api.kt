@@ -8,13 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Api {
 
-    val apiClient = OkHttpClient
-        .Builder()
-        .addInterceptor(SpooncularApiInterceptor()).build()
-
     val retrofit = Retrofit.Builder()
         .baseUrl(Constants.Base_URL)
-        .client(apiClient)
+        .client(Client.apiClient.build())
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
 

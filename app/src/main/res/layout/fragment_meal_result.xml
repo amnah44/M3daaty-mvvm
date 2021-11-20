@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.graps.m3daaty.ui.mealreslut.MealResultViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,13 +24,23 @@
             android:textSize="@dimen/text_xx_large"
             android:layout_margin="22dp"
             android:textStyle="bold"
-            android:text="Cuisine name"
+            android:text="@string/cuisine_name"
             android:textColor="@color/dark_400_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.certainCuisineRecipe}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Cuisine_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <!--<androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -36,7 +50,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:listitem="@layout/item_cuisine_recipe"
-            />
+            />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

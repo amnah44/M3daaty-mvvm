@@ -17,30 +17,30 @@ interface SpoonApiService {
     fun getRandomRecipes(
         @Query("tags") filterTag: String?,
         @Query("number") recipesCount: Int?,
-        @Query("apiKey") apiKey: String?
+        //@Query("apiKey") apiKey: String?
     ) : Single<Response<RandomRecipes>>
 
     @GET("complexSearch")
     fun getRecipeSearchResult(
         @Query("query") recipeName:String?,
-        @Query("apiKey") apiKey: String?
+        //@Query("apiKey") apiKey: String?
     ) : Single<Response<RecipeSearch>>
 
     @GET("{id}/information")
     fun getRecipeInfo(
         @Path("id") recipeId:Int,
-        @Query("apiKey") apiKey: String?
+        //@Query("apiKey") apiKey: String?
     ) : Single<Response<RecipeInformation>>
 
     @GET("{id}/tasteWidget.json")
     fun getRecipeTaste(
         @Path("id") recipeId:Int,
-        @Query("apiKey") apiKey: String?
+        //@Query("apiKey") apiKey: String?
     ) : Single<Response<RecipeTaste>>
 
     @GET("{id}/nutritionWidget.json")
     fun getRecipeNutrition(
         @Path("id") recipeId:Int,
-        @Query("apiKey") apiKey: String?
+        //@Query("apiKey") apiKey: String?
     ) : Single<Response<RecipeNutrition>>
 }

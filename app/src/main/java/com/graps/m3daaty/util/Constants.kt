@@ -4,6 +4,7 @@ object Constants {
 
     const val Base_URL = " https://api.spoonacular.com/recipes/"
     const val apiKey = "8f09860e23a549f18f24e73f0f36b3fd"
+    const val MoeKey = "a69118fd986c4349a1576ad47e0a59ee"
     const val RAFAL_API_KEY= "c958189416de4d73a253a568d4bea876"
     const val AMNAH_API_KEY = "01b3a537512f4ec283c75859c506d232"
     const val FOOD_DETAILS_FRAGMENT="food details fragment"
