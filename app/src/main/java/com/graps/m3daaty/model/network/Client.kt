@@ -11,8 +11,7 @@ object Client {
 
 
     val apiClient = OkHttpClient.Builder()
-        .addInterceptor(object : Interceptor{
-        override fun intercept(chain: Interceptor.Chain): Response {
+        .addInterceptor(Interceptor { chain ->
             val original = chain.request()
 
             val originalHttpUrl = original.url
@@ -22,9 +21,8 @@ object Client {
 
             val request = original.newBuilder().url(originalHttpUrl).build()
 
-            return chain.proceed(request)
-        }
-    })
+            chain.proceed(request)
+        })
 }
 
 

@@ -38,19 +38,21 @@
 
             <TextView
                 android:id="@+id/meal_name"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_small"
-                android:fontFamily="@font/palanquin_dark_regular"
-                android:text="@{item.title}"
-                android:lines="1"
+                android:layout_marginEnd="49dp"
                 android:ellipsize="end"
+                android:fontFamily="@font/palanquin_dark_regular"
+                android:lines="1"
+                android:text="@{item.title}"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/meal_image"
                 app:layout_constraintTop_toTopOf="@id/meal_image"
-                tools:text="Strawberry Scones"/>
+                tools:text="Strawberry Scones" />
 
             <TextView
                 android:id="@+id/recipe_time"
