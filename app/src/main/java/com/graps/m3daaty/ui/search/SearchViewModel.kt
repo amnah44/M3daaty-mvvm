@@ -7,6 +7,9 @@ import com.graps.m3daaty.model.domain.recipeSearch.RecipeSearch
 import com.graps.m3daaty.model.domain.recipeSearch.Result
 import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
+import com.graps.m3daaty.util.Category
+import com.graps.m3daaty.util.Cuisine
+import com.graps.m3daaty.util.CuisineList
 import com.graps.m3daaty.util.State
 import java.util.concurrent.TimeUnit
 
@@ -37,7 +40,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
         } else {
             _searchResult.postValue(State.Loading)
             observe(
-                Repository.getRecipeSearchResult(text.toString()).delaySubscription(1000L, TimeUnit.MILLISECONDS),
+                Repository.getRecipeSearchResult(text.toString(), null).delaySubscription(1000L, TimeUnit.MILLISECONDS),
                 ::onSearchSuccess, ::onSearchError
             )
         }

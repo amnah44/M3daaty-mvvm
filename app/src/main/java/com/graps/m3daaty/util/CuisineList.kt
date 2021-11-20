@@ -22,11 +22,12 @@ class CuisineList {
         Cuisine(Category.LATINAMERICAN, 18),
         Cuisine(Category.MEDITERRANEAN,19 ),
         Cuisine(Category.MEXICAN,20 ),
-        Cuisine(Category.NORDIC ,21 ),
-        Cuisine(Category.SOUTHERN,22 ),
-        Cuisine(Category.SPANISH,23 ),
-        Cuisine(Category.THAI,24 ),
-        Cuisine(Category.VIETNAMESE,25 ),
+        Cuisine(Category.MIDDLEEASTERN,21),
+        Cuisine(Category.NORDIC ,22 ),
+        Cuisine(Category.SOUTHERN,23 ),
+        Cuisine(Category.SPANISH,24 ),
+        Cuisine(Category.THAI,25 ),
+        Cuisine(Category.VIETNAMESE,26 ),
 
 
 
