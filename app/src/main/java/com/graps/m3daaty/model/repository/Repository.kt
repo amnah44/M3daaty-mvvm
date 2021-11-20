@@ -12,15 +12,14 @@ object Repository {
             .getRandomRecipes(
                 filterTag,
                 recipesCount,
-                //Constants.apiKey
             )
     )
-    fun getRecipeSearchResult(recipeName: String?) =
+    fun getRecipeSearchResult(recipeName: String?, cuisineName: String?) =
         wrapResponse(
             Api.spoonApi
                 .getRecipeSearchResult(
                     recipeName,
-                    //Constants.apiKey
+                    cuisineName,
                 )
         )
     fun getRecipeInfo(recipeId: Int) {
@@ -28,7 +27,6 @@ object Repository {
             Api.spoonApi
                 .getRecipeInfo(
                     recipeId,
-                    //Constants.apiKey
                 )
         )
     }
@@ -36,14 +34,12 @@ object Repository {
         Api.spoonApi
             .getRecipeTaste(
                 recipeId,
-                //Constants.apiKey
             )
     )
     fun getRecipeNutrition(recipeId: Int) = wrapResponse(
         Api.spoonApi
             .getRecipeNutrition(
                 recipeId,
-                //Constants.apiKey
             )
     )
 
