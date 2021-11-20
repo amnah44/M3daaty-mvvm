@@ -19,6 +19,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     val searchResult: LiveData<State<RecipeSearch?>?> = _searchResult
     val loadingFlag: LiveData<Boolean> = _loadingFlag
     val errorFlag: LiveData<Boolean> = _errorFlag
+
     init {
         _loadingFlag.postValue(true)
         _errorFlag.postValue(false)
@@ -34,6 +35,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
             _loadingFlag.postValue(true)
             _searchResult.postValue(null)
         } else {
+            _searchResult.postValue(State.Loading)
             observe(
                 Repository.getRecipeSearchResult(text.toString()).delaySubscription(1000L, TimeUnit.MILLISECONDS),
                 ::onSearchSuccess, ::onSearchError
@@ -43,10 +45,17 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
 
     private fun onSearchSuccess(result: State<RecipeSearch>) {
         _searchResult.postValue(result)
-        if(_searchResult.value?.toData()?.results?.isEmpty()==true)
+        if(_searchResult.value?.toData()?.results?.isEmpty()==true){
             _errorFlag.postValue(true)
+            _loadingFlag.postValue(false)
+        }
+
         else
+        {
             _errorFlag.postValue(false)
+            _loadingFlag.postValue(false)
+        }
+
         Log.i("SEARCH_RESULT", searchResult.value?.toData()?.results.toString())
     }
 
