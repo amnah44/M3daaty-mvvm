@@ -42,21 +42,35 @@
             app:layout_constraintStart_toStartOf="@+id/home_title"
             app:layout_constraintTop_toBottomOf="@+id/home_title" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/search_recycler_view"
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/margin_medium"
-            android:orientation="vertical"
-            app:showOnSuccess="@{viewModel.searchResult}"
-            app:items="@{viewModel.searchResult.toData().results}"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:shimmer_repeat_mode="restart"
+            app:shimmer_shape="radial"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_search"
-            app:spanCount="2"
-            tools:listitem="@layout/item_search" />
+            app:layout_constraintTop_toBottomOf="@+id/text_search">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="vertical"
+                app:showOnSuccess="@{viewModel.searchResult}"
+                app:items="@{viewModel.searchResult.toData().results}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_search"
+                app:spanCount="2"
+                tools:listitem="@layout/item_search" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/load_lotti"
@@ -80,7 +94,7 @@
             android:layout_height="300dp"
             android:layout_margin="@dimen/margin_medium"
             onTextChanged="@{viewModel.errorFlag}"
-            app:layout_constraintBottom_toBottomOf="@+id/search_recycler_view"
+            app:layout_constraintBottom_toBottomOf="@+id/shimmer_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
