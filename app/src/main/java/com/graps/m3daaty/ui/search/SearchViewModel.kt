@@ -37,7 +37,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
         } else {
             _searchResult.postValue(State.Loading)
             observe(
-                Repository.getRecipeSearchResult(text.toString()).delaySubscription(1000L, TimeUnit.MILLISECONDS),
+                Repository.getRecipeSearchResult(text.toString(), null).delaySubscription(1000L, TimeUnit.MILLISECONDS),
                 ::onSearchSuccess, ::onSearchError
             )
         }
