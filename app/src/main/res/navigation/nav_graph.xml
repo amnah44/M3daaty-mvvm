@@ -9,12 +9,20 @@
         android:id="@+id/homeFragment"
         android:name="com.graps.m3daaty.ui.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.graps.m3daaty.ui.categoris.CategoryFragment"
         android:label="CategoryFragment"
-        tools:layout="@layout/fragment_category"/>
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/foodDetailsFragment"
         android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
@@ -23,21 +31,27 @@
         <argument
             android:name="recipeData"
             app:argType="com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 
     <fragment
         android:id="@+id/cuisine_recipe"
         android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
         android:label="MealResultFragment"
-        tools:layout="@layout/fragment_meal_result"/>
+        tools:layout="@layout/fragment_meal_result">
+        <action
+            android:id="@+id/action_cuisine_recipe_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.graps.m3daaty.ui.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
-    <activity
-        android:id="@+id/foodActivity"
-        android:name="com.graps.m3daaty.ui.M3daatyActivity"
-        android:label="FoodActivity"
-        tools:layout="@layout/activity_m3daaty"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
 </navigation>
