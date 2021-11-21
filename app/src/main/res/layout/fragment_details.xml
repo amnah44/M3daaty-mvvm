@@ -360,6 +360,43 @@
                     android:text="@{viewModel.details.toData().veryHealthy.toString()}"
                     tools:text="Not popular"/>
 
+                <TextView
+                    android:id="@+id/text_vegn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="Vegn"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_score_healthy" />
+
+                <View
+                    android:id="@+id/view_circle_vegn"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_vegn"
+                    app:layout_constraintTop_toBottomOf="@id/text_vegn"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+
+                <TextView
+                    android:id="@+id/text_score_vegn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_vegn"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_vegn"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_vegn"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().vegan.toString()}"
+                    tools:text="Not popular"/>
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
