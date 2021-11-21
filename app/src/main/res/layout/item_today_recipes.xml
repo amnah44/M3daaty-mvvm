@@ -7,6 +7,9 @@
         <variable
             name="item"
             type="com.graps.m3daaty.model.domain.randomRecipes.Recipe" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.home.IRandomInteractionListener" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -14,6 +17,7 @@
         android:layout_height="110dp"
         app:cardCornerRadius="8dp"
         android:elevation="@dimen/cardview_default_elevation"
+        android:onClick="@{() -> listener.onTodayRecipeListener(item)}"
         android:background="@color/gray_200"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_marginStart="@dimen/margin_small"

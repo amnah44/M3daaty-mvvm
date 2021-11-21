@@ -12,4 +12,6 @@ class RandomRecipesAdapter(
     override val layoutId: Int = R.layout.item_today_recipes
 }
 
-interface IRandomInteractionListener: BaseInteractionListener
+interface IRandomInteractionListener : BaseInteractionListener {
+    fun onTodayRecipeListener(recipe: Recipe)
+}

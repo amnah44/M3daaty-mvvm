@@ -1,8 +1,11 @@
 package com.graps.m3daaty.model.domain.randomRecipes
 
-
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
+@SuppressLint("ParcelCreator")
 data class Recipe(
     @SerializedName("aggregateLikes")
     val aggregateLikes: Int? = null,
@@ -29,7 +32,7 @@ data class Recipe(
     @SerializedName("healthScore")
     val healthScore: Double? = null,
     @SerializedName("id")
-    val id: Int? = null,
+    val id: Int?,
     @SerializedName("image")
     val image: String? = null,
     @SerializedName("imageType")
@@ -74,4 +77,12 @@ data class Recipe(
     val veryPopular: Boolean? = null,
     @SerializedName("weightWatcherSmartPoints")
     val weightWatcherSmartPoints: Int? = null
-)
+): Parcelable {
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(p0: Parcel?, p1: Int) {
+        TODO("Not yet implemented")
+    }
+}

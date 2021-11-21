@@ -3,8 +3,10 @@ package com.graps.m3daaty.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.graps.m3daaty.model.domain.randomRecipes.RandomRecipes
+import com.graps.m3daaty.model.domain.randomRecipes.Recipe
 import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
+import com.graps.m3daaty.util.Event
 import com.graps.m3daaty.util.State
 
 class HomeViewModel : BaseViewModel(), IRandomInteractionListener, RecommendedInteractionListener {
@@ -14,13 +16,14 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener, RecommendedIn
     private val _recipeRecommended = MutableLiveData<State<RandomRecipes>>()
     val recipeRecommended: LiveData<State<RandomRecipes>>
         get() = _recipeRecommended
+    val recipes = MutableLiveData<Event<Recipe>>()
 
     init {
         getRandomRecipesToday()
         getRecommendedRecipe()
     }
 
-    private fun getRandomRecipesToday(){
+    private fun getRandomRecipesToday() {
         _recipeToday.postValue(State.Loading)
         observe(Repository.getRandomRecipes("vegetarian", 15), ::onSuccess, ::onError)
     }
@@ -31,10 +34,13 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener, RecommendedIn
         _recipeRecommended.postValue(State.Loading)
         observe(Repository.getRandomRecipes("main course", 10), ::onSuccessRecommended, ::onError)
     }
-
     private fun onSuccessRecommended(recommended: State<RandomRecipes>) =
         _recipeRecommended.postValue(recommended)
 
     private fun onError(throwable: Throwable) = State.Error(throwable.message.toString())
+
+    override fun onTodayRecipeListener(recipe: Recipe) {
+        recipes.postValue(Event(recipe))
+    }
 
 }
