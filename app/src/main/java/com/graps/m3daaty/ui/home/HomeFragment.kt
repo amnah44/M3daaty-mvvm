@@ -24,7 +24,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         viewModel.recipes.observe(this, EventObserve {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
             Navigation.findNavController(requireView()).navigate(action)
-
         })
     }
 }

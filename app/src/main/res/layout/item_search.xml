@@ -15,23 +15,21 @@
         app:cardCornerRadius="8dp"
         android:elevation="@dimen/cardview_default_elevation"
         android:background="@color/gray_200"
-        android:layout_margin="16dp"
-        android:padding="10dp">
+        android:layout_margin="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/image_food"
+                imageUrl="@{item.image}"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="16dp"
-                imageUrl="@{item.imageUrl}"
-                tools:background="@drawable/ic_image_place_holder"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="120dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@drawable/ic_image_place_holder" />
 
             <TextView
                 android:id="@+id/text_food"
@@ -39,12 +37,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="32dp"
                 android:layout_marginHorizontal="16dp"
-                android:ems="8"
+                android:ems="10"
                 android:fontFamily="@font/montserrat_alternates_bold"
                 android:textColor="@color/black"
                 android:text="@{item.title}"
                 tools:text="Food"
-                android:textSize="12sp"
+                android:textSize="20sp"
                 android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/image_food"

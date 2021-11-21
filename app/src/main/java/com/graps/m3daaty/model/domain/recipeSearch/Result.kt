@@ -12,6 +12,4 @@ data class Result(
     val imageType: String? = null,
     @SerializedName("title")
     val title: String? = null
-){
-    fun getImageUrl() = "https://spoonacular.com/recipeImages/$image"
-}
+)

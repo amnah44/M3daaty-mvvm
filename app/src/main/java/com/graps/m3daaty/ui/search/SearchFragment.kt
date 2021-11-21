@@ -18,5 +18,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
     override fun setupView() {
         binding.viewModel = viewModel
         binding.searchRecyclerView.adapter = SearchAdapter(mutableListOf(),viewModel)
+
+        binding.viewModel.recipes.observe(viewLifecycleOwner){
+            val nav =
+        }
     }
 }
