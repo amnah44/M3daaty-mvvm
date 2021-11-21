@@ -43,4 +43,8 @@ class HomeViewModel : BaseViewModel(), IRandomInteractionListener, RecommendedIn
         recipes.postValue(Event(recipe))
     }
 
+    override fun onClickRecommended(recipe: Recipe) {
+        recipes.postValue(Event(recipe))
+    }
+
 }
