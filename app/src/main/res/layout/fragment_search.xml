@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_medium"
             android:padding="@dimen/padding_small"
+            android:lines="1"
             android:onTextChanged="@{(text,start,before,count)->viewModel.onSearchTextChanged(text)}"
             android:drawablePadding="@dimen/padding_small"
             android:background="@drawable/search_rounded_view"

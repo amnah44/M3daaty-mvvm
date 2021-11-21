@@ -16,7 +16,7 @@ object Client {
 
             val originalHttpUrl = original.url
                 .newBuilder()
-                .addQueryParameter("apiKey", Constants.BASHIR_API_KEY)
+                .addQueryParameter("apiKey", Constants.MoeKey)
                 .build()
 
             val request = original.newBuilder().url(originalHttpUrl).build()
