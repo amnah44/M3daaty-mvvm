@@ -7,7 +7,7 @@ import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
 import com.graps.m3daaty.util.State
 
-class FoodDetailsViewModel : BaseViewModel() ,IngredientsAndDirectionInteractionListener{
+class FoodDetailsViewModel : BaseViewModel(){
     val details = MutableLiveData<State<RecipeInformation>>()
 
     fun getRecipesDetails(id: Int){
@@ -19,11 +19,4 @@ class FoodDetailsViewModel : BaseViewModel() ,IngredientsAndDirectionInteraction
 
     private fun onError(throwable: Throwable) = State.Error(throwable.message.toString())
 
-    override fun onClickIngredient(ingredientsText: String) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onClickDirection(DirectionText: String) {
-        TODO("Not yet implemented")
-    }
 }
