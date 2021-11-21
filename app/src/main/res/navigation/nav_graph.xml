@@ -11,36 +11,17 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_foodDetailsFragment"
-            app:destination="@id/foodDetailsFragment" />
+            android:id="@+id/action_homeFragment_to_cuisine_recipe"
+            app:destination="@id/cuisine_recipe" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.graps.m3daaty.ui.categoris.CategoryFragment"
         android:label="CategoryFragment"
         tools:layout="@layout/fragment_category">
-        <action
-            android:id="@+id/action_categoryFragment_to_cuisine_recipe"
-            app:destination="@id/cuisine_recipe"
-             />
-        <action
-            android:id="@+id/action_categoryFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_categoryFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/foodDetailsFragment"
-        android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
-        android:label="FoodDetailsFragment"
-        tools:layout="@layout/fragment_food_details">
-        <argument
-            android:name="recipeData"
-            app:argType="com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation" />
-        <argument
-            android:name="id"
-            app:argType="integer" />
     </fragment>
 
     <fragment
@@ -48,9 +29,6 @@
         android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
         android:label="MealResultFragment"
         tools:layout="@layout/fragment_meal_result">
-        <action
-            android:id="@+id/action_cuisine_recipe_to_foodDetailsFragment"
-            app:destination="@id/foodDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -58,7 +36,21 @@
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
-            android:id="@+id/action_searchFragment_to_foodDetailsFragment"
-            app:destination="@id/foodDetailsFragment" />
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.graps.m3daaty.ui.details.DetailsFragment"
+        android:label="DetailsFragment" >
+
+        <argument
+            android:name="details"
+            app:argType="com.graps.m3daaty.model.domain.randomRecipes.Recipe"
+            app:nullable="true" />
+        <argument
+            android:name="result"
+            app:argType="com.graps.m3daaty.model.domain.recipeSearch.Result"
+            app:nullable="true" />
     </fragment>
 </navigation>

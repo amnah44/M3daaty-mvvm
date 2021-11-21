@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.graps.m3daaty.ui.home.HomeViewModel" />
@@ -20,11 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_medium"
-            android:textSize="@dimen/text_x_large"
-            android:maxEms="8"
             android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/dark_color"
+            android:maxEms="8"
             android:text="@string/what_would_you_like_to_cook"
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/text_x_large"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,8 +48,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/montserrat_alternates_bold"
             android:text="@string/today_recipe_s"
             android:textColor="@color/dark_color"
@@ -70,6 +71,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:showOnSuccess="@{viewModel.recipeToday}"
             app:spanCount="2"
             tools:listitem="@layout/item_today_recipes" />
 
@@ -77,31 +79,63 @@
             android:id="@+id/recommended_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_small"
-            android:text="Recommended"
-            android:textSize="@dimen/text_large"
-            android:textColor="@color/dark_color"
             android:fontFamily="@font/montserrat_alternates_bold"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="Recommended"
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/text_large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@id/home_recycler_view"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_recycler_view" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recommended_recycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_small"
             android:orientation="vertical"
             app:items="@{viewModel.recipeRecommended.toData().recipes}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recommended_text"
+            app:showOnSuccess="@{viewModel.recipeToday}"
+            tools:listitem="@layout/item_recommended" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/load_lotti"
+            android:layout_width="@dimen/search_animation_width"
+            android:layout_height="@dimen/search_animation_height"
+            android:layout_margin="@dimen/margin_medium"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/item_recommended"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/load"
+            app:showOnLoading="@{viewModel.recipeToday}" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/error_lotti"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/salad_cat"
+            app:showOnError="@{viewModel.recipeToday}" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

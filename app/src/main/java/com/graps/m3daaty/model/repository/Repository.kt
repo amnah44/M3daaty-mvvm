@@ -22,14 +22,14 @@ object Repository {
                     cuisineName,
                 )
         )
-    fun getRecipeInfo(recipeId: Int) {
+    fun getRecipeInfo(recipeId: Int) =
         wrapResponse(
             Api.spoonApi
                 .getRecipeInfo(
                     recipeId,
                 )
         )
-    }
+
     fun getRecipeTaste(recipeId: Int) = wrapResponse(
         Api.spoonApi
             .getRecipeTaste(

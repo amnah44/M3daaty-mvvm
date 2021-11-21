@@ -1,21 +1,22 @@
 package com.graps.m3daaty.ui.details
 
 import androidx.lifecycle.MutableLiveData
-import com.graps.m3daaty.model.domain.randomRecipes.RandomRecipes
+import com.graps.m3daaty.model.domain.randomRecipes.Recipe
+import com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation
+import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
 import com.graps.m3daaty.util.State
-import io.reactivex.rxjava3.core.Single
 
-class FoodDetailsViewModel : BaseViewModel() ,IngredientsAndDirectionInteractionListener{
+class FoodDetailsViewModel : BaseViewModel(){
+    val details = MutableLiveData<State<RecipeInformation>>()
 
-
-
-
-    override fun onClickIngredient(ingredientsText: String) {
-        TODO("Not yet implemented")
+    fun getRecipesDetails(id: Int){
+        details.postValue(State.Loading)
+        observe(Repository.getRecipeInfo(id), ::onSuccess, ::onError)
     }
 
-    override fun onClickDirection(DirectionText: String) {
-        TODO("Not yet implemented")
-    }
+    private fun onSuccess(detail: State<RecipeInformation>) = details.postValue(detail)
+
+    private fun onError(throwable: Throwable) = State.Error(throwable.message.toString())
+
 }

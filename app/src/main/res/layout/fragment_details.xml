@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
-            name="itemRecipe"
-            type="com.graps.m3daaty.model.domain.recipeInformation.RecipeInformation" />
-        <variable
-            name="listener"
-            type="com.graps.m3daaty.ui.details.IngredientsAndDirectionInteractionListener" />
-        <variable
             name="viewModel"
             type="com.graps.m3daaty.ui.details.FoodDetailsViewModel" />
-
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -26,8 +19,8 @@
             style="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            imageUrl="@{itemRecipe.image}"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
+            imageUrl="@{viewModel.details.toData().image}"
             app:layout_constraintDimensionRatio="H,77:70"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,13 +67,17 @@
 
                 <TextView
                     android:id="@+id/text_food_name"
-                    android:text="@{itemRecipe.title}"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_large"
                     android:fontFamily="@font/roboto_bold"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:text="@{viewModel.details.toData().title}"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_xx_large"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/head_bar"
                     tools:text="Rais al3aasfoor" />
@@ -114,7 +111,6 @@
                             android:id="@+id/text_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{itemRecipe.readyInMinutes}"
                             android:fontFamily="@font/roboto_bold"
                             android:textColor="@color/green_color"
                             android:textSize="@dimen/text_medium"
@@ -157,7 +153,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_bold"
-                            foodCost="@{itemRecipe.cheap}"
                             android:textColor="@color/orange_color_200"
                             android:textSize="@dimen/text_medium"
                             app:layout_constraintEnd_toEndOf="@id/icon_smile"
@@ -201,7 +196,6 @@
                             android:layout_marginBottom="@dimen/margin_small"
                             android:fontFamily="@font/roboto_bold"
                             android:textAlignment="center"
-                            android:text="@{itemRecipe.aggregateLikes}"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -244,7 +238,6 @@
                     app:layout_constraintTop_toTopOf="@id/view_circle_score"
                     app:layout_constraintBottom_toBottomOf="@id/view_circle_score"
                     android:layout_marginStart="@dimen/margin_small"
-                    android:text="@{String.valueOf(itemRecipe.healthScore)}"
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
@@ -282,7 +275,6 @@
                     app:layout_constraintTop_toTopOf="@id/view_circle_cost"
                     app:layout_constraintBottom_toBottomOf="@id/view_circle_cost"
                     android:layout_marginStart="@dimen/margin_small"
-                    android:text="@{String.valueOf(itemRecipe.pricePerServing)}"
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
@@ -318,7 +310,6 @@
                     app:layout_constraintStart_toEndOf="@id/view_circle_popular"
                     app:layout_constraintTop_toTopOf="@id/view_circle_popular"
                     app:layout_constraintBottom_toBottomOf="@id/view_circle_popular"
-                    foodPopularity="@{itemRecipe.veryPopular}"
                     android:layout_marginStart="@dimen/margin_small"
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
@@ -342,7 +333,6 @@
                     android:id="@+id/recycler_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:items="@{itemRecipe.extendedIngredients}"
                     android:layout_marginTop="@dimen/margin_small"
                     app:layout_constraintStart_toStartOf="@id/text_ingredients"
                     app:layout_constraintTop_toBottomOf="@id/text_ingredients"

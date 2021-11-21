@@ -12,5 +12,7 @@
     <string name="price_per_serving">Price Per Serving</string>
     <string name="popularity">Popularity</string>
     <string name="cuisine_name">Cuisine name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

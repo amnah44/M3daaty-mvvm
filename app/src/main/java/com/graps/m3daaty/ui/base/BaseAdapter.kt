@@ -32,15 +32,15 @@ abstract class BaseAdapter<T>(
         when(holder) {
             is ItemViewHolder ->{
                 holder.binding.setVariable(BR.item, currentItem)
-//                holder.binding.setVariable(BR.listener, listener)
+                holder.binding.setVariable(BR.listener, listener)
             }
         }
     }
 
     fun setItems(newItems : List<T>){
-        val moviesDiffUtil = DiffUtil.calculateDiff(FoodDiffUtils(items, newItems))
+        val foodDiffUtil = DiffUtil.calculateDiff(FoodDiffUtils(items, newItems))
         items = newItems
-        moviesDiffUtil.dispatchUpdatesTo(this)
+        foodDiffUtil.dispatchUpdatesTo(this)
 
     }
 
