@@ -403,7 +403,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_large"
                     android:fontFamily="@font/robotor_egular"
-                    android:text="Vegn"
+                    android:text="vegetarian"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="parent"
