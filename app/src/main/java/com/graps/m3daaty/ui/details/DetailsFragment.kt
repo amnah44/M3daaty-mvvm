@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.graps.m3daaty.R
 import com.graps.m3daaty.databinding.FragmentDetailsBinding
@@ -16,6 +17,9 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
     private val args: DetailsFragmentArgs by navArgs()
 
     override fun setupView() {
+        binding.backArrow.setOnClickListener {
+            Navigation.findNavController(requireView()).popBackStack()
+        }
         val food = args.details
         food.let { food?.id?.let { it1 -> viewModel.getRecipesDetails(it1) } }
 
