@@ -3,10 +3,12 @@ package com.graps.m3daaty.ui.search
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.graps.m3daaty.model.domain.randomRecipes.Recipe
 import com.graps.m3daaty.model.domain.recipeSearch.RecipeSearch
 import com.graps.m3daaty.model.domain.recipeSearch.Result
 import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
+import com.graps.m3daaty.util.Event
 import com.graps.m3daaty.util.State
 import java.util.concurrent.TimeUnit
 
@@ -19,6 +21,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     val searchResult: LiveData<State<RecipeSearch?>?> = _searchResult
     val loadingFlag: LiveData<Boolean> = _loadingFlag
     val errorFlag: LiveData<Boolean> = _errorFlag
+    val results= MutableLiveData<Event<Result>>()
 
     init {
         _loadingFlag.postValue(true)
@@ -26,7 +29,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     }
 
     override fun onSearchItemClicked(result: Result) {
-        TODO("Not yet implemented")
+        results.postValue(Event(result))
     }
 
     fun onSearchTextChanged(text: CharSequence?) {

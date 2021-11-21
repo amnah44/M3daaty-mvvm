@@ -22,9 +22,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             it.recommendedRecycler.adapter = RecommendedRecipeAdapter(mutableListOf(), viewModel)
         }
         viewModel.recipes.observe(this, EventObserve {
-            val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
+            val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it,null)
             Navigation.findNavController(requireView()).navigate(action)
-
         })
     }
 }

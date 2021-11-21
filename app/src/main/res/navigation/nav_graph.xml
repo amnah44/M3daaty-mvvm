@@ -35,6 +35,9 @@
         android:name="com.graps.m3daaty.ui.search.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -43,6 +46,11 @@
 
         <argument
             android:name="details"
-            app:argType="com.graps.m3daaty.model.domain.randomRecipes.Recipe" />
+            app:argType="com.graps.m3daaty.model.domain.randomRecipes.Recipe"
+            app:nullable="true" />
+        <argument
+            android:name="result"
+            app:argType="com.graps.m3daaty.model.domain.recipeSearch.Result"
+            app:nullable="true" />
     </fragment>
 </navigation>

@@ -17,6 +17,9 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
 
     override fun setupView() {
         val food = args.details
-        food.let { food.id?.let { it1 -> viewModel.getRecipesDetails(it1) } }
+        food.let { food?.id?.let { it1 -> viewModel.getRecipesDetails(it1) } }
+
+        val resultFood = args.result
+        resultFood.let { it?.id?.let { it1->viewModel.getRecipesDetails(it1) } }
     }
 }
