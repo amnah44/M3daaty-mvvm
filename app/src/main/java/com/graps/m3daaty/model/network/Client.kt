@@ -16,7 +16,7 @@ object Client {
 
             val originalHttpUrl = original.url
                 .newBuilder()
-                .addQueryParameter("apiKey", Constants.AMNAH_API_KEY)
+                .addQueryParameter("apiKey", Constants.apiKey)
                 .build()
 
             val request = original.newBuilder().url(originalHttpUrl).build()

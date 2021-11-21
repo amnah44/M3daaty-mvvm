@@ -13,7 +13,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MealResultViewModel : BaseViewModel() {
+class MealResultViewModel : BaseViewModel(),IRecipeSearchListener {
 
     private val _certainCuisineRecipe = MutableLiveData<State<RecipeSearch>>()
 
@@ -32,7 +32,6 @@ class MealResultViewModel : BaseViewModel() {
             ::onSuccess ,
             ::onError
         )
-
     }
 
     private fun onSuccess(recipes : State<RecipeSearch>) =
