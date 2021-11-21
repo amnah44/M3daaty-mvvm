@@ -51,6 +51,11 @@
 
         <argument
             android:name="details"
-            app:argType="com.graps.m3daaty.model.domain.randomRecipes.Recipe" />
+            app:argType="com.graps.m3daaty.model.domain.randomRecipes.Recipe"
+            app:nullable="true" />
+        <argument
+            android:name="result"
+            app:argType="com.graps.m3daaty.model.domain.recipeSearch.Result"
+            app:nullable="true" />
     </fragment>
 </navigation>

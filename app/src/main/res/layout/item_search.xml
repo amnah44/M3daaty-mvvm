@@ -7,6 +7,9 @@
         <variable
             name="item"
             type="com.graps.m3daaty.model.domain.recipeSearch.Result" />
+        <variable
+            name="listener"
+            type="com.graps.m3daaty.ui.search.SearchInteractionListener" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -15,7 +18,8 @@
         app:cardCornerRadius="8dp"
         android:elevation="@dimen/cardview_default_elevation"
         android:background="@color/gray_200"
-        android:layout_margin="16dp">
+        android:layout_margin="16dp"
+        android:onClick="@{()->listener.onSearchItemClicked(item)}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

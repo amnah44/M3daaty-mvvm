@@ -8,6 +8,7 @@ import com.graps.m3daaty.model.domain.recipeSearch.RecipeSearch
 import com.graps.m3daaty.model.domain.recipeSearch.Result
 import com.graps.m3daaty.model.repository.Repository
 import com.graps.m3daaty.ui.base.BaseViewModel
+import com.graps.m3daaty.util.Event
 import com.graps.m3daaty.util.State
 import java.util.concurrent.TimeUnit
 
@@ -20,15 +21,15 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     val searchResult: LiveData<State<RecipeSearch?>?> = _searchResult
     val loadingFlag: LiveData<Boolean> = _loadingFlag
     val errorFlag: LiveData<Boolean> = _errorFlag
-    val recipes = MutableLiveData<Recipe>()
+    val results= MutableLiveData<Event<Result>>()
 
     init {
         _loadingFlag.postValue(true)
         _errorFlag.postValue(false)
     }
 
-    override fun onSearchItemClicked(recipe: Recipe) {
-        TODO("Not yet implemented")
+    override fun onSearchItemClicked(result: Result) {
+        results.postValue(Event(result))
     }
 
     fun onSearchTextChanged(text: CharSequence?) {
