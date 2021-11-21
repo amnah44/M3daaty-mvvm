@@ -20,7 +20,7 @@
         android:layout_marginEnd="@dimen/margin_medium"
         android:layout_marginBottom="@dimen/margin_little"
         android:elevation="2dp"
-        android:onClick="@{()->listener.onClickRecommended()}"
+        android:onClick="@{()->listener.onClickRecommended(item)}"
         app:cardCornerRadius="18dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
