@@ -71,6 +71,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:showOnSuccess="@{viewModel.recipeToday}"
             app:spanCount="2"
             tools:listitem="@layout/item_today_recipes" />
 
@@ -102,6 +103,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recommended_text"
+            app:showOnSuccess="@{viewModel.recipeToday}"
             tools:listitem="@layout/item_recommended" />
 
         <com.airbnb.lottie.LottieAnimationView
