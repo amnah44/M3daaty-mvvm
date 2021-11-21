@@ -37,11 +37,6 @@
         tools:layout="@layout/fragment_search">
     </fragment>
     <fragment
-        android:id="@+id/foodDetailsFragment"
-        android:name="com.graps.m3daaty.ui.details.FoodDetailsFragment"
-        android:label="FoodDetailsFragment"
-        tools:layout="@layout/fragment_food_details"/>
-    <fragment
         android:id="@+id/detailsFragment"
         android:name="com.graps.m3daaty.ui.details.DetailsFragment"
         android:label="DetailsFragment" >
