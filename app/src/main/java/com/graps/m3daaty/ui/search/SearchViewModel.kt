@@ -47,6 +47,7 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     }
 
     private fun onSearchSuccess(result: State<RecipeSearch>) {
+        _searchResult.postValue(State.Loading)
         _searchResult.postValue(result)
         if(_searchResult.value?.toData()?.results?.isEmpty()==true){
             _errorFlag.postValue(true)
@@ -63,7 +64,8 @@ class SearchViewModel : BaseViewModel(), SearchInteractionListener {
     }
 
     private fun onSearchError(throwable: Throwable) {
-
+        _errorFlag.postValue(true)
+        _searchResult.postValue(null)
     }
 
 }
