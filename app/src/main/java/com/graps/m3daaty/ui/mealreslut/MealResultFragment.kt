@@ -15,6 +15,9 @@ class MealResultFragment : BaseFragment<FragmentMealResultBinding>(R.layout.frag
 
     override fun setupView() {
 
+        binding.let {
+            it.viewModel = viewModel
+            it.recipesRecyclerView.adapter = MealResultAdapter(mutableListOf(), viewModel)
+        }
     }
-
 }

@@ -12,4 +12,6 @@ class RecommendedRecipeAdapter(
     override val layoutId: Int = R.layout.item_recommended
 }
 
-interface RecommendedInteractionListener: BaseInteractionListener
+interface RecommendedInteractionListener: BaseInteractionListener{
+    fun onClickRecommended(recipe: Recipe)
+}
