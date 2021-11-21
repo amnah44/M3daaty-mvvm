@@ -12,20 +12,14 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 class CategoryViewModel : BaseViewModel(),CategoryInteractionListener {
 
-    private val _category = MutableLiveData<List<CuisineList>>()
-    val category:LiveData<List<CuisineList>> get()= _category
+    private val _category = MutableLiveData<Event<Cuisine>>()
+    val category:LiveData<Event<Cuisine>> get()= _category
     val cuisineList = CuisineList()
 
 
-    init {
-        cuisineCategory()
-    }
-    override fun onCategorySelected(cuisine: State<CuisineList>) {
+    override fun onCategorySelected(cuisine: Cuisine) {
+        _category.postValue(Event(cuisine))
 
-    }
-
-    private fun cuisineCategory(){
-        _category.postValue(category.value)
     }
 
 }
