@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_small"
-                android:layout_marginEnd="49dp"
+                android:layout_marginEnd="@dimen/margin_x_large"
                 android:ellipsize="end"
                 android:paddingStart="@dimen/padding_small"
                 android:fontFamily="@font/palanquin_dark_regular"
