@@ -200,6 +200,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
+                            android:text="@{viewModel.details.toData().aggregateLikes.toString()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@id/icon_likes"
                             app:layout_constraintStart_toStartOf="@id/icon_likes"
@@ -243,6 +244,7 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().healthScore.toString()}"
                     tools:text="44.0"/>
 
 
@@ -280,6 +282,7 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().pricePerServing.toString()}"
                     tools:text="333"/>
 
                 <TextView
@@ -316,6 +319,7 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().veryPopular.toString()}"
                     tools:text="Not popular"/>
 
 
