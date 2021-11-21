@@ -3,44 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable-xhdpi/home_rounded_view.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/back_arrow.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/card_details_bar.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/category_action.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/circle_orange.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/green_circle.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/home_action.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_alarm_clock_alt.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_baseline_local_fire_department_24.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_bowl.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_cuisine_header.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_home_fill.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_image_place_holder.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_like.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_m3daaty_icon.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_m3daaty_launcher_foreground.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_pacman.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_pot_select_1.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_pot_select_2.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_pot_select_3.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_pot_unselect_1.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_search_fill.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_search_out_fill.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/ic_twotone_emoji_emotions_24.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/search_actoin.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/search_rounded_view.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/drawable/splash_screen_layout.xml" value="0.2203125" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_details.xml" value="0.25" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/fragment_details.xml" value="0.33" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/item_ingredients.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/item_recommended.xml" value="0.20102564102564102" />
         <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_food_details.xml" value="0.19722222222222222" />
         <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_home.xml" value="0.19722222222222222" />
         <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_search.xml" value="0.19722222222222222" />
         <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/item_recommended.xml" value="0.20416666666666666" />
         <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/item_search.xml" value="0.20416666666666666" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/item_today_recipes.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/back_arrow.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/card_details_bar.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/circle_orange.xml" value="0.26614583333333336" />

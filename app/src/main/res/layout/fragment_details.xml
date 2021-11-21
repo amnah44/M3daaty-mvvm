@@ -200,6 +200,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_small"
+                            android:text="@{viewModel.details.toData().aggregateLikes.toString()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@id/icon_likes"
                             app:layout_constraintStart_toStartOf="@id/icon_likes"
@@ -243,6 +244,7 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().healthScore.toString()}"
                     tools:text="44.0"/>
 
 
@@ -280,6 +282,7 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().pricePerServing.toString()}"
                     tools:text="333"/>
 
                 <TextView
@@ -316,31 +319,120 @@
                     android:fontFamily="@font/robotor_egular"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().veryPopular.toString()}"
                     tools:text="Not popular"/>
 
 
                 <TextView
-                    android:id="@+id/text_ingredients"
+                    android:id="@+id/text_healty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_large"
                     android:fontFamily="@font/robotor_egular"
-                    android:text="@string/ingredients"
+                    android:text="Very Healthy"
                     android:textColor="@color/dark_400_color"
                     android:textSize="@dimen/text_large"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_score_popular" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_ingredients"
+                <View
+                    android:id="@+id/view_circle_healty"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_healty"
+                    app:layout_constraintTop_toBottomOf="@id/text_healty"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+
+                <TextView
+                    android:id="@+id/text_score_healthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_healty"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_healty"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_healty"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().veryHealthy.toString()}"
+                    tools:text="Not popular"/>
+
+                <TextView
+                    android:id="@+id/text_vegn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="Vegn"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_score_healthy" />
+
+                <View
+                    android:id="@+id/view_circle_vegn"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_vegn"
+                    app:layout_constraintTop_toBottomOf="@id/text_vegn"
+                    android:layout_marginStart="@dimen/margin_little"
                     android:layout_marginTop="@dimen/margin_small"
-                    app:layout_constraintStart_toStartOf="@id/text_ingredients"
-                    app:layout_constraintTop_toBottomOf="@id/text_ingredients"
-                    tools:listitem="@layout/item_ingredients"/>
+                    android:background="@drawable/circle_orange" />
 
 
+                <TextView
+                    android:id="@+id/text_score_vegn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_vegn"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_vegn"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_vegn"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().vegan.toString()}"
+                    tools:text="Not popular"/>
+
+                <TextView
+                    android:id="@+id/text_vegetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:fontFamily="@font/robotor_egular"
+                    android:text="vegetarian"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_score_vegn" />
+
+                <View
+                    android:id="@+id/view_circle_vegetarian"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    app:layout_constraintStart_toStartOf="@id/text_vegetarian"
+                    app:layout_constraintTop_toBottomOf="@id/text_vegetarian"
+                    android:layout_marginStart="@dimen/margin_little"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/circle_orange" />
+
+
+                <TextView
+                    android:id="@+id/text_score_vegetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/view_circle_vegetarian"
+                    app:layout_constraintTop_toTopOf="@id/view_circle_vegetarian"
+                    app:layout_constraintBottom_toBottomOf="@id/view_circle_vegetarian"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:fontFamily="@font/robotor_egular"
+                    android:textColor="@color/dark_400_color"
+                    android:textSize="@dimen/text_small"
+                    android:text="@{viewModel.details.toData().vegetarian.toString()}"
+                    tools:text="Not popular"/>
 
 
 

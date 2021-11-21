@@ -10,7 +10,7 @@
     <string name="string_recipe_image">recipe image</string>
     <string name="health_score">Health Score</string>
     <string name="price_per_serving">Price Per Serving</string>
-    <string name="popularity">Popularity</string>
+    <string name="popularity">Very Popular</string>
     <string name="cuisine_name">Cuisine name</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
