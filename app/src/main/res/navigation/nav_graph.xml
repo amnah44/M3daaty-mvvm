@@ -22,6 +22,12 @@
         android:name="com.graps.m3daaty.ui.categoris.CategoryFragment"
         android:label="CategoryFragment"
         tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_cuisine_recipe"
+            app:destination="@id/cuisine_recipe" />
+        <argument
+            android:name="cuisine"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -29,6 +35,9 @@
         android:name="com.graps.m3daaty.ui.mealreslut.MealResultFragment"
         android:label="MealResultFragment"
         tools:layout="@layout/fragment_meal_result">
+        <argument
+            android:name="cuisine"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"

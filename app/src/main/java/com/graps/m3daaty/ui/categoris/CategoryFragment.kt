@@ -25,13 +25,12 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
             it.recyclerCuisine.adapter = CategoryAdapter(mutableListOf(), viewModel)
 
             viewModel.category.observe(this,
-                EventObserve{
-                    val nav = CategoryFragmentDirections.actionCategoryFragmentToHomeFragment()
+                EventObserve{cuisine->
+                    val nav = CategoryFragmentDirections.actionCategoryFragmentToCuisineRecipe(cuisine.toString())
                  Navigation.findNavController(requireView()).navigate(nav)
                 }
 
             )
-
         }
     }
 
