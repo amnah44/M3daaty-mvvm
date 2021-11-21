@@ -16,7 +16,7 @@ object Client {
 
             val originalHttpUrl = original.url
                 .newBuilder()
-                .addQueryParameter("apiKey", Constants.MoeKey)
+                .addQueryParameter("apiKey", Constants.RAFAL_API_KEY)
                 .build()
 
             val request = original.newBuilder().url(originalHttpUrl).build()

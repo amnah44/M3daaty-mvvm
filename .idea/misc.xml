@@ -3,11 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_food_details.xml" value="0.19722222222222222" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_home.xml" value="0.19722222222222222" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/fragment_search.xml" value="0.19722222222222222" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/item_recommended.xml" value="0.20416666666666666" />
-        <entry key="..\:/M3daaty-mvvm-anmah/app/src/main/res/layout/item_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/home_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_home_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/M3daaty-mvvm/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/back_arrow.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/card_details_bar.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/drawable/circle_orange.xml" value="0.26614583333333336" />
@@ -29,6 +28,13 @@
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/layout/item_ingredients.xml" value="0.25" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/layout/item_search.xml" value="0.1" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/M3daaty-mvvm/app/src/main/res/layout/item_today_recipes.xml" value="0.25" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_food_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_home.xml" value="0.22037037037037038" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_meal_result.xml" value="0.25416666666666665" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/item_cuisine.xml" value="0.21481481481481482" />
+        <entry key="..\:/phoneApps/M3daaty-mvvm/app/src/main/res/layout/item_today_recipes.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
